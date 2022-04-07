@@ -22,7 +22,7 @@ const Logo = () => {
 
   useEffect(() => {
     sequence();
-  }, []);
+  }, [sequence]);
 
   return (
     <div className="hidden lg:block sm:w-full">
@@ -37,7 +37,7 @@ const Logo = () => {
         <motion.path
           d="M75.6349 72.7741V74.2741H77.1349H98.8464V168.244L2.59779 1.5H222.922L126.423 168.679V74.2741H148.135H149.635V72.7741V47.5089V46.0089H148.135H77.1349H75.6349V47.5089V72.7741Z"
           stroke="white"
-          stroke-width="3"
+          strokeWidth="3"
           variants={imageVariants}
           initial="hidden"
           animate={svgLogoControls}
