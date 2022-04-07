@@ -18,7 +18,8 @@
 }
 
 .container {
-  @apply w-[70%] mx-auto;
+  @apply sm:w-[70%] w-[90%] mx-auto;
+
 }
 
 .bg_backdrop {
