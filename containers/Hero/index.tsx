@@ -19,7 +19,6 @@ const Hero = () => {
           <div className={homeStyles.left}>
             <h1 className={homeStyles.intro_title}>
               <motion.div
-                className=""
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ ease: "easeInOut", duration: 1 }}

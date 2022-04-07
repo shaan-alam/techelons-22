@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Hero } from "../containers";
-import Message from "../containers/Message";
+import { Hero, Message } from "../containers";
 
 export default function Home() {
   return (

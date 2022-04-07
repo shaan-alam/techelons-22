@@ -1,0 +1,34 @@
+.message_section {
+  @apply w-screen h-screen relative;
+}
+
+.container {
+  @apply w-[90%] sm:w-[70%] mx-auto;
+
+  h1 {
+    @apply text-center font-montserrat text-white font-bold text-3xl;
+  }
+}
+
+.grid {
+  margin: 70px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 2rem;
+
+  .teacher_pic {
+    @apply w-3/4;
+  }
+
+  .message {
+    @apply font-josefin text-white w-full;
+
+    p {
+      @apply leading-7;
+    }
+
+    blockquote {
+      margin-top: 1rem;
+    }
+  }
+}

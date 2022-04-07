@@ -13,11 +13,10 @@
       box-shadow: inset 0 200px 1000px rgb(0, 0, 0);
     }
   }
-
 }
 
 .container {
-  @apply sm:w-[70%] w-[90%] mx-auto;
+  @apply sm:w-[70%] w-[90%] mx-auto h-screen;
 
 }
 
