@@ -11,13 +11,14 @@
 }
 
 .grid {
-  margin: 70px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 2rem;
+  @apply mt-[70px] flex flex-col md:flex-row;
+
+  &:nth-child(odd) {
+    @apply flex-col-reverse md:flex-row;
+  }
 
   .teacher_pic {
-    @apply w-3/4;
+    @apply w-3/4 mx-12 my-8 md:my-0;
   }
 
   .message {
