@@ -25,7 +25,7 @@ const Logo = () => {
   }, [sequence]);
 
   return (
-    <div className="hidden lg:block sm:w-full">
+    <div className="hidden lg:block sm:w-full -my-8">
       <svg
         width="226"
         height="175"

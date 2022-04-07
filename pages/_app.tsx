@@ -4,8 +4,7 @@ import "../styles/globals.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <div className="bg-black">
-      {/* <Navbar /> */}
-      
+      <Navbar />
       <Component {...pageProps} />
     </div>
   );

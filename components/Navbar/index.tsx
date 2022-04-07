@@ -1,20 +1,90 @@
+import { useState } from "react";
 import NavbarStyles from "./Navbar.module.scss";
+import { motion, useAnimation } from "framer-motion";
 
 const Navbar = () => {
+  const [navActive, setNavActive] = useState<boolean>(false);
+  const navControls = useAnimation();
+  const menuListControls = useAnimation();
+
+  const toggleNav = () => {
+    setNavActive(!navActive);
+
+    if (!navActive) {
+      navControls.start({
+        scaleY: 1,
+        transition: { duration: 0.3, ease: [1, 2, 3, 4] },
+      });
+      menuListControls.start({
+        opacity: 1,
+        transition: { delay: 1, ease: "easeIn" },
+      });
+    } else {
+      menuListControls.start({
+        opacity: 0,
+        transition: { ease: "easeIn" },
+      });
+      navControls.start({ scaleY: 0, transition: { delay: 0.5 } });
+    }
+  };
+
   return (
     <nav className={NavbarStyles.nav}>
       <div className={NavbarStyles.nav__container}>
         <div className={NavbarStyles.logo}>
-          <h1 className="flex items-center justify-start">
-            <img src="/images/logo.svg" alt="Techelons" className="w-32" />
+          <img
+            src={`./images/${!navActive ? "small_logo.svg" : "logo_black.svg"}`}
+            alt="Techelons"
+            className="w-8 h-8"
+          />
+          <h1
+            className={`hidden sm:block font-montserrat font-bold ${
+              navActive ? "text-black" : "text-white"
+            }`}
+          >
+            TECHELONS
           </h1>
         </div>
         <div className={NavbarStyles.nav__menu}>
-          <ul>
-            <li>Home</li>
-            <li>Our Events</li>
-            <li>About Us</li>
-          </ul>
+          <div
+            className={`${NavbarStyles.nav_toggler} ${
+              navActive ? NavbarStyles.active : ""
+            }`}
+            onClick={toggleNav}
+          >
+            <span></span>
+            <span></span>
+          </div>
+          <motion.div
+            initial={{ scaleY: 0 }}
+            animate={navControls}
+            className={`${NavbarStyles.nav__menu_bg} ${
+              navActive ? NavbarStyles.active : ""
+            }`}
+          ></motion.div>
+          <motion.ul
+            className={`${NavbarStyles.nav__menu_list} ${
+              navActive ? NavbarStyles.active : ""
+            }`}
+            initial={{ opacity: 0 }}
+            animate={menuListControls}
+          >
+            <li>
+              <a href="#!" className="no-underline font-josefin">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#!" className="no-underline font-josefin">
+                Our Events
+              </a>
+            </li>
+            <li>
+              <a href="#!" className="no-underline font-josefin">
+                About Us
+              </a>
+            </li>
+          </motion.ul>
         </div>
       </div>
     </nav>
