@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavbarStyles from "./Navbar.module.scss";
 import { motion, useAnimation } from "framer-motion";
+import { logoVariant, navVariant } from "./constants";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
@@ -29,9 +30,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={NavbarStyles.nav}>
+    <motion.nav
+      className={NavbarStyles.nav}
+      variants={navVariant}
+      initial="hidden"
+      animate="visible"
+    >
       <div className={NavbarStyles.nav__container}>
-        <div className={NavbarStyles.logo}>
+        <motion.div
+          className={NavbarStyles.logo}
+          variants={logoVariant}
+          initial="hidden"
+          animate="visible"
+        >
           <img
             src={`./images/${!navActive ? "small_logo.svg" : "logo_black.svg"}`}
             alt="Techelons"
@@ -44,7 +55,7 @@ const Navbar = () => {
           >
             TECHELONS
           </h1>
-        </div>
+        </motion.div>
         <div className={NavbarStyles.nav__menu}>
           <div
             className={`${NavbarStyles.nav_toggler} ${
@@ -66,7 +77,7 @@ const Navbar = () => {
             className={`${NavbarStyles.nav__menu_list} ${
               navActive ? NavbarStyles.active : ""
             }`}
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={menuListControls}
           >
             <li>
@@ -87,7 +98,7 @@ const Navbar = () => {
           </motion.ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

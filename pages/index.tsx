@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Hero } from "../containers";
+import Message from "../containers/Message";
 
 export default function Home() {
   return (
@@ -11,15 +12,7 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <div className="h-screen my-12">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia nisi
-        asperiores sed quo aut, inventore vero veritatis, voluptate, sequi
-        doloribus quisquam assumenda! Provident rem pariatur nisi? Dicta harum
-        ex deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Ducimus nisi atque nostrum hic officiis nam numquam natus commodi nulla!
-        Asperiores sapiente exercitationem illum nam quis eaque cumque
-        cupiditate laborum nulla?
-      </div>
+      <Message />
     </>
   );
 }
