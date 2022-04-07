@@ -1,0 +1,23 @@
+.nav {
+  @apply sticky top-0 p-4 w-full backdrop-filter bg-opacity-20 backdrop-blur-xl bg-black z-20;
+}
+
+.nav__container {
+  @apply container mx-auto flex justify-between;
+}
+
+.logo {
+  @apply w-1/2;
+
+  h1 {
+    @apply text-white font-montserrat font-semibold;
+  }
+}
+
+.nav__menu {
+  @apply w-1/2;
+
+  ul {
+    @apply text-white w-1/2 ml-auto list-none flex justify-between items-center;
+  }
+}
