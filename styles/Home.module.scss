@@ -4,6 +4,7 @@
 
 .bg_backdrop {
   @apply bg-black absolute inset-0;
+  z-index: 2;
 }
 
 .hero {
@@ -13,11 +14,23 @@
     @apply my-36;
 
     .intro_title {
-      @apply font-josefin text-sm text-gray-300 text-center sm:text-left relative overflow-hidden;
+      @apply font-josefin text-[12px] sm:text-sm text-gray-300 text-center sm:text-left relative overflow-hidden;
     }
 
     .main_title {
       @apply mt-4 font-montserrat text-4xl text-center sm:text-left sm:text-7xl text-white font-bold relative overflow-hidden;
+    }
+
+    .intro_text {
+      @apply font-josefin text-sm text-gray-300 mt-4 sm:w-3/4 text-center w-[100%] mx-auto sm:mx-0 sm:text-left leading-7;
+    }
+
+    .cta {
+      @apply text-center sm:text-left mt-8;
+
+      button {
+        text-transform: uppercase;
+      }
     }
   }
 }

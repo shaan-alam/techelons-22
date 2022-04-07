@@ -7,10 +7,6 @@ import { v4 } from "uuid";
 const Hero = () => {
   return (
     <main className={homeStyles.container}>
-      <div className="h-screen w-screen fixed inset-0">
-        <span className="bg-[#36B1E2] opacity-40 absolute top-0 -left-28 filter blur-[100px] h-[400px] w-[400px] rounded-full"></span>
-        <span className="bg-[#FF02A1] opacity-40 absolute top-0 -right-28 filter blur-[100px] h-[400px] w-[400px] rounded-full"></span>
-      </div>
       <motion.div
         className={homeStyles.bg_backdrop}
         initial={{ opacity: 1 }}
@@ -43,7 +39,7 @@ const Hero = () => {
             ))}
           </motion.h1>
           <motion.p
-            className="font-josefin text-sm text-gray-300 mt-4 sm:w-3/4 text-center w-[90%] mx-auto sm:mx-0 sm:text-left leading-7"
+            className={homeStyles.intro_text}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
@@ -53,9 +49,8 @@ const Hero = () => {
             Science Department in a way that helps them grow through various
             activities and opportunities.
           </motion.p>
-          <div className="text-center sm:text-left">
+          <div className={homeStyles.cta}>
             <Button
-              className="mt-8 uppercase"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.8 }}
