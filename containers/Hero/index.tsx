@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import homeStyles from "../../styles/Home.module.scss";
 import { container, item } from "./constants";
 import { v4 } from "uuid";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -52,13 +53,15 @@ const Hero = () => {
               activities and opportunities.
             </motion.p>
             <div className={homeStyles.cta}>
-              <Button
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2.4 }}
-              >
-                Get Started
-              </Button>
+              <Link target="#events" smooth={true}>
+                <Button
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 2.4 }}
+                >
+                  Check Out Our Events
+                </Button>
+              </Link>
             </div>
           </div>
           <Logo />

@@ -6,7 +6,7 @@
   @apply w-[90%] sm:w-[70%] mx-auto;
 
   h1 {
-    @apply mb-[70px] text-center font-montserrat text-white font-bold text-3xl;
+    @apply mb-[70px] text-center font-montserrat text-white font-bold text-lg sm:text-3xl uppercase;
   }
 }
 
@@ -22,7 +22,7 @@
   }
 
   .message {
-    @apply font-josefin text-white w-full;
+    @apply text-center md:text-left font-josefin text-white w-full text-sm;
 
     p {
       @apply leading-7;

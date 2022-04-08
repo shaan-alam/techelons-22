@@ -29,7 +29,7 @@
   @apply relative z-10 flex;
 
   .left {
-    @apply my-28;
+    @apply my-16 sm:my-28;
 
     .intro_title {
       @apply font-josefin text-[12px] sm:text-sm text-gray-300 text-center sm:text-left relative overflow-hidden;

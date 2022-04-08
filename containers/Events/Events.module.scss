@@ -2,7 +2,7 @@
   @apply w-[90%] sm:w-[70%] mx-auto h-auto my-[10px];
 
   h1 {
-    @apply text-center font-montserrat text-white font-bold text-3xl mb-[70px];
+    @apply text-center font-montserrat text-white font-bold mb-[70px] text-lg sm:text-3xl uppercase;
   }
 
   .events {
