@@ -1,17 +1,17 @@
 .message_section {
-  @apply w-screen h-screen relative;
+  @apply w-screen h-auto relative my-[70px];
 }
 
 .container {
   @apply w-[90%] sm:w-[70%] mx-auto;
 
   h1 {
-    @apply text-center font-montserrat text-white font-bold text-3xl;
+    @apply mb-[70px] text-center font-montserrat text-white font-bold text-3xl;
   }
 }
 
 .grid {
-  @apply mt-[70px] flex flex-col md:flex-row;
+  @apply my-[70px] flex flex-col md:flex-row;
 
   &:nth-child(odd) {
     @apply flex-col-reverse md:flex-row;
