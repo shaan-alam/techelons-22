@@ -1,0 +1,19 @@
+.container {
+  @apply w-[90%] sm:w-[70%] mx-auto h-auto my-[10px];
+
+  h1 {
+    @apply text-center font-montserrat text-white font-bold text-3xl mb-[70px];
+  }
+
+  .events {
+    @apply grid grid-cols-3 gap-12;
+
+    .event {
+      @apply transition-transform hover:scale-110 cursor-pointer;
+
+      h4 {
+        @apply text-center font-josefin text-white font-bold text-xl mt-[20px];
+      }
+    }
+  }
+}
