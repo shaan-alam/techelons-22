@@ -107,6 +107,7 @@
     }
 
     li a {
+      @apply font-josefin;
       position: relative;
 
       &:after {
