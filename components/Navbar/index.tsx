@@ -82,7 +82,7 @@ const Navbar = () => {
             animate={menuListControls}
           >
             <li>
-              <a href="#!" onClick={() => setNavActive(false)}>
+              <a href="#!" onClick={toggleNav}>
                 Home
               </a>
             </li>
@@ -90,13 +90,14 @@ const Navbar = () => {
               <Link
                 target="#events"
                 smooth={true}
-                onClick={() => setNavActive(false)}
+                className="cursor-pointer"
+                onClick={toggleNav}
               >
                 Events
               </Link>
             </li>
             <li>
-              <a href="#!" onClick={() => setNavActive(false)}>
+              <a href="#!" onClick={toggleNav}>
                 About Us
               </a>
             </li>
