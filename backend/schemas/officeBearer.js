@@ -1,6 +1,6 @@
 export default {
-  name: "officeBearers",
-  title: "Office Bearers",
+  name: "officeBearer",
+  title: "Office Bearer",
   type: "document",
   fields: [
     {
@@ -26,7 +26,7 @@ export default {
   preview: {
     select: {
       title: "name",
-      officeBearers: "name",
+      officeBearer: "name",
       media: "profileImage",
     },
     prepare(selection) {

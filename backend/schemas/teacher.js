@@ -1,6 +1,6 @@
 export default {
-  name: "coreMembers",
-  title: "Core Members",
+  name: "teacher",
+  title: "Teacher",
   type: "document",
   fields: [
     {
@@ -9,9 +9,9 @@ export default {
       type: "string",
     },
     {
-      name: "designation",
-      title: "Designation",
-      type: "string",
+      name: "message",
+      title: "Message",
+      type: "text",
     },
     {
       name: "profileImage",
@@ -26,7 +26,7 @@ export default {
   preview: {
     select: {
       title: "name",
-      coreMembers: "name",
+      teacher: "name",
       media: "profileImage",
     },
     prepare(selection) {

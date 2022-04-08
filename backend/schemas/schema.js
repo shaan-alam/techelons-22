@@ -6,10 +6,10 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // We import object and document schemas
 import president from "./president";
-import vicePresidents from "./vicePresidents";
-import officeBearers from "./officeBearers";
-import coreMembers from "./coreMembers";
-import teachers from "./teachers";
+import vicePresident from "./vicePresident";
+import officeBearer from "./officeBearer";
+import coreMember from "./coreMember";
+import teacher from "./teacher";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -21,9 +21,9 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     president,
-    vicePresidents,
-    coreMembers,
-    officeBearers,
-    teachers
+    vicePresident,
+    coreMember,
+    officeBearer,
+    teacher,
   ]),
 });
