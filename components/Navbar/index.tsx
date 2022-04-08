@@ -2,7 +2,7 @@ import { useState } from "react";
 import NavbarStyles from "./Navbar.module.scss";
 import { motion, useAnimation } from "framer-motion";
 import { logoVariant, navVariant } from "./constants";
-import { Link } from "react-scroll";
+import Link from "next/link";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
@@ -82,22 +82,12 @@ const Navbar = () => {
             animate={menuListControls}
           >
             <li>
-              <a href="#!" onClick={toggleNav}>
-                Home
-              </a>
-            </li>
-            <li>
-              <Link
-                target="#events"
-                smooth={true}
-                className="cursor-pointer"
-                onClick={toggleNav}
-              >
-                Events
+              <Link href="/">
+                <a>Home</a>
               </Link>
             </li>
             <li>
-              <a href="#!" onClick={toggleNav}>
+              <a href="#!">
                 About Us
               </a>
             </li>
