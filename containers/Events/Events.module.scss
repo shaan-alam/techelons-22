@@ -1,12 +1,21 @@
 .container {
-  @apply w-[90%] sm:w-[70%] mx-auto h-auto my-[10px];
+  @apply w-[90%] sm:w-[70%] mx-auto h-auto my-[3rem];
+  height: auto;
 
   h1 {
     @apply text-center font-montserrat text-white font-bold mb-[70px] text-lg sm:text-3xl uppercase;
   }
+  
+  .parallax_container {
+    @apply font-bold font-montserrat text-gray-700 opacity-30 sm:text-[3rem] text-[1rem] md:text-[13rem] absolute top-[32rem] left-[2rem] md:left-[14rem] -z-50;
+  }
+
+  .laptop {
+    @apply absolute -top-[12rem] -z-50;
+  }
 
   .events {
-    @apply md:grid grid-cols-3 gap-12;
+    @apply md:grid grid-cols-4 gap-12;
 
     .event {
       @apply my-[70px] md:my-0 transition-transform hover:scale-110 cursor-pointer;

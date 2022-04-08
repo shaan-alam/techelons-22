@@ -1,9 +1,13 @@
 import "../styles/globals.scss";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <ParallaxProvider>
+        <Component {...pageProps} />
+        
+      </ParallaxProvider>
     </>
   );
 }

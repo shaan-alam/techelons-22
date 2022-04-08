@@ -8,6 +8,10 @@
   h1 {
     @apply mb-[70px] text-center font-montserrat text-white font-bold text-lg sm:text-3xl uppercase;
   }
+
+  .parallax_container {
+    @apply font-bold font-montserrat text-gray-700 opacity-[30%] sm:text-[4rem] text-[3rem] absolute top-[13rem] right-0 -z-50;
+  }
 }
 
 .grid {

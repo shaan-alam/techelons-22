@@ -1,11 +1,19 @@
 import messageStyles from "./Message.module.scss";
 import LazyImage from "react-lazy-blur-image";
+import { Parallax } from "react-scroll-parallax";
 
 const Message = () => {
   return (
     <section className={messageStyles.message_section}>
       <div className={messageStyles.container}>
         <h1>Message from Teacher Incharge</h1>
+        <Parallax
+          speed={25}
+          translateX={[-10, 0]}
+          className={messageStyles.parallax_container}
+        >
+          <h2>MESSAGE FROM TEACHERS</h2>
+        </Parallax>
         <div className={messageStyles.grid}>
           <div className={messageStyles.teacher_pic}>
             <LazyImage

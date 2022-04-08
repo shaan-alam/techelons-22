@@ -400,6 +400,11 @@ balanced-match@^1.0.0:
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
   integrity sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==
 
+bezier-easing@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
+  integrity sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY=
+
 binary-extensions@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
@@ -1602,6 +1607,13 @@ p-try@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
   integrity sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
 
+parallax-controller@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/parallax-controller/-/parallax-controller-1.3.5.tgz#a2f2b84c59dd2ec91f6c128ad7b21ea8b444cc2e"
+  integrity sha512-AyfQT+uXWzTAVz8uAQZuCYlqvq5pKNxg34Gvk1TbA/qvvyA9SkWtzWXlgDZ4SElDWT8OBfidE0DAYqslaX2++A==
+  dependencies:
+    bezier-easing "^2.1.0"
+
 parent-module@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parent-module/-/parent-module-1.0.1.tgz#691d2709e78c79fae3a156622452d00762caaaa2"
@@ -1766,6 +1778,13 @@ react-lazy-blur-image@^0.1.2:
   integrity sha512-UCoPdr7T4UEhR7OsAIIwbTNq6SeFR6lb4j5yRI5bGB5FahazJLCjazG4f0eDAN0ZWBwfSxMeJFwU05dcemkzMQ==
   dependencies:
     react-visibility-sensor "^5.1.1"
+
+react-scroll-parallax@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-3.0.5.tgz#1d2c3fa39f596faeb40ea6136e004f39d9726647"
+  integrity sha512-2StEKOUEl7INk2B1AtjtsPxcG0aCLu0K9DRg74ecngZF4772qmTNGzG/u/KGfGKo0WXTlJ9eAaQifk6uF6RiyQ==
+  dependencies:
+    parallax-controller "^1.3.5"
 
 react-scroll@^1.8.6:
   version "1.8.6"
