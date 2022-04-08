@@ -6,7 +6,7 @@ import { v4 } from "uuid";
 
 const Hero = () => {
   return (
-    <>
+    <section id="home">
       <div className={homeStyles.bg_image}></div>
       <main className={homeStyles.container}>
         <motion.div
@@ -64,7 +64,7 @@ const Hero = () => {
           <Logo />
         </div>
       </main>
-    </>
+    </section>
   );
 };
 

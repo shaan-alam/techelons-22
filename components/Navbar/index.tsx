@@ -2,6 +2,7 @@ import { useState } from "react";
 import NavbarStyles from "./Navbar.module.scss";
 import { motion, useAnimation } from "framer-motion";
 import { logoVariant, navVariant } from "./constants";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
@@ -81,17 +82,21 @@ const Navbar = () => {
             animate={menuListControls}
           >
             <li>
-              <a href="#!" className="no-underline font-josefin">
+              <a href="#!" onClick={() => setNavActive(false)}>
                 Home
               </a>
             </li>
             <li>
-              <a href="#!" className="no-underline font-josefin">
-                Our Events
-              </a>
+              <Link
+                target="#events"
+                smooth={true}
+                onClick={() => setNavActive(false)}
+              >
+                Events
+              </Link>
             </li>
             <li>
-              <a href="#!" className="no-underline font-josefin">
+              <a href="#!" onClick={() => setNavActive(false)}>
                 About Us
               </a>
             </li>

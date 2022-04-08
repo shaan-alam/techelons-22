@@ -3,7 +3,7 @@ import LazyImage from "react-lazy-blur-image";
 
 const Events = () => {
   return (
-    <section className={eventStyles.container}>
+    <section className={eventStyles.container} id="events">
       <h1>Our Events</h1>
       <div className={eventStyles.events}>
         <div className={eventStyles.event}>
