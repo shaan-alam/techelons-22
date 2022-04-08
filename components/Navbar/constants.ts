@@ -5,7 +5,7 @@ export const logoVariant = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 3,
+      delay: 2,
     },
   },
 };
@@ -17,7 +17,7 @@ export const navVariant = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 2.7,
+      delay: 1,
     },
   },
 };
