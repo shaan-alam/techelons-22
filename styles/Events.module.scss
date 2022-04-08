@@ -1,0 +1,24 @@
+.container {
+  @apply w-[90%] sm:w-[70%] mx-auto;
+
+  .main_poster {
+    img {
+      @apply w-full md:w-1/2 mx-auto my-12;
+    }
+  }
+
+
+  .header {
+    @apply flex w-full justify-between items-center pb-4 border-b;
+
+    h1 {
+      @apply font-montserrat text-white text-xl font-bold;
+    }
+  }
+
+  .event_caption {
+    p {
+      @apply my-4 text-white font-josefin leading-7;
+    }
+  }
+}
