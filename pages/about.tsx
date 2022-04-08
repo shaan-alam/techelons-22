@@ -27,7 +27,7 @@ const About = ({
   let temp = coreMembers[0];
   coreMembers[0] = coreMembers[5];
   coreMembers[5] = temp;
-  
+
   return (
     <>
       <Navbar />
@@ -78,6 +78,7 @@ const About = ({
         <div className={aboutStyles.vice_presidents}>
           {vicePresidents.map((vicePresident) => (
             <ProfileCard
+              key={vicePresident.name}
               name={vicePresident.name}
               designation={vicePresident.designation}
               imageURL={vicePresident.profileImage}
@@ -87,6 +88,7 @@ const About = ({
         <div className={aboutStyles.office_bearers}>
           {officeBearers.map((officeBearer) => (
             <ProfileCard
+              key={officeBearer.name}
               name={officeBearer.name}
               designation={officeBearer.designation}
               imageURL={officeBearer.profileImage}
@@ -96,6 +98,7 @@ const About = ({
         <div className={aboutStyles.core_members}>
           {coreMembers.map((coreMember) => (
             <ProfileCard
+              key={coreMember.name}
               name={coreMember.name}
               designation={coreMember.designation}
               imageURL={coreMember.profileImage}
