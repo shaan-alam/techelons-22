@@ -53,7 +53,7 @@ const Hero = () => {
               activities and opportunities.
             </motion.p>
             <div className={homeStyles.cta}>
-              <Link target="#events" smooth={true}>
+              <Link to="events" smooth={true}>
                 <Button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
