@@ -1,0 +1,32 @@
+.container {
+  @apply w-[90%] sm:w-[70%] mx-auto my-12 h-screen;
+}
+
+.meet_team {
+  @apply w-[90%] sm:w-[70%] mx-auto my-20;
+
+  .president {
+    @apply grid justify-center;
+  }
+
+  .vice_presidents {
+    margin: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 4rem;
+  }
+
+  .core_members {
+    margin: 70px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 4rem;
+  }
+
+  .office_bearers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 4rem;
+    margin: 70px 0;
+  }
+}
