@@ -2,8 +2,32 @@ import { Navbar, ProfileCard } from "../components";
 import aboutStyles from "../styles/About.module.scss";
 import { motion } from "framer-motion";
 import { pageTransition } from "../animations";
+import { GetStaticProps } from "next";
+import sanityClient from "../sanityClient";
 
-const About = () => {
+interface Member {
+  name: string;
+  designation: string;
+  profileImage: string;
+}
+
+interface Props {
+  president: Member;
+  vicePresidents: Member[];
+  officeBearers: Member[];
+  coreMembers: Member[];
+}
+
+const About = ({
+  president,
+  vicePresidents,
+  officeBearers,
+  coreMembers,
+}: Props) => {
+  let temp = coreMembers[0];
+  coreMembers[0] = coreMembers[5];
+  coreMembers[5] = temp;
+  
   return (
     <>
       <Navbar />
@@ -46,96 +70,37 @@ const About = () => {
         </h1>
         <div className={aboutStyles.president}>
           <ProfileCard
-            name="Prince Sharma"
-            designation="President"
-            imageURL="./images/prince.png"
+            name={president.name}
+            designation={president.designation}
+            imageURL={president.profileImage}
           />
         </div>
         <div className={aboutStyles.vice_presidents}>
-          <ProfileCard
-            name="Jannt Chehal"
-            designation="Vice President"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Harsh Shekhawat"
-            designation="Vice President"
-            imageURL="./images/prince.png"
-          />
+          {vicePresidents.map((vicePresident) => (
+            <ProfileCard
+              name={vicePresident.name}
+              designation={vicePresident.designation}
+              imageURL={vicePresident.profileImage}
+            />
+          ))}
         </div>
         <div className={aboutStyles.office_bearers}>
-          <ProfileCard
-            name="Kumar Amrendram"
-            designation="Secretary"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Saloni Singh"
-            designation="Joint Secretary"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Vaibhav Bhardwaj"
-            designation="Treasurer"
-            imageURL="./images/prince.png"
-          />
+          {officeBearers.map((officeBearer) => (
+            <ProfileCard
+              name={officeBearer.name}
+              designation={officeBearer.designation}
+              imageURL={officeBearer.profileImage}
+            />
+          ))}
         </div>
         <div className={aboutStyles.core_members}>
-          <ProfileCard
-            name="Shaan Alam"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Lata Yadav"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Dipanshu Lohani"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Navin"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Rohit Kumar"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Vani Malhotra"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Kushagrah"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Ajay Meena"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Ravi Yadav"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Neelansh Aggarwal"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
-          <ProfileCard
-            name="Shweta Yadav"
-            designation="Core Member"
-            imageURL="./images/prince.png"
-          />
+          {coreMembers.map((coreMember) => (
+            <ProfileCard
+              name={coreMember.name}
+              designation={coreMember.designation}
+              imageURL={coreMember.profileImage}
+            />
+          ))}
         </div>
       </section>
     </>
@@ -143,3 +108,38 @@ const About = () => {
 };
 
 export default About;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const president = await sanityClient.fetch(`*[_type == 'president'] {
+    name,
+    designation,
+    "profileImage": profileImage.asset->url
+  }`);
+
+  const vicePresidents = await sanityClient.fetch(`*[_type == 'vicePresident'] {
+    name,
+    designation,
+    "profileImage": profileImage.asset->url
+  }`);
+
+  const officeBearers = await sanityClient.fetch(`*[_type == 'officeBearer'] {
+    name,
+    designation,
+    "profileImage": profileImage.asset->url
+  }`);
+
+  const coreMembers = await sanityClient.fetch(`*[_type == 'coreMember'] {
+    name,
+    designation,
+    "profileImage": profileImage.asset->url
+  }`);
+
+  return {
+    props: {
+      president: president[0],
+      vicePresidents,
+      officeBearers,
+      coreMembers,
+    },
+  };
+};
