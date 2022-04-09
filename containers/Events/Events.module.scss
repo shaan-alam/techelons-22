@@ -6,7 +6,7 @@
   }
   
   .parallax_container {
-    @apply font-bold font-montserrat text-gray-700 opacity-30 sm:text-[3rem] text-[1rem]  absolute top-[32rem] left-[2rem] md:left-[25rem] -z-50;
+    @apply font-bold font-montserrat text-gray-700 opacity-30 sm:text-[3rem] text-[1rem]  absolute top-[32rem] right-[2rem] md:left-[25rem] -z-50;
   }
 
   .laptop {
@@ -14,10 +14,14 @@
   }
 
   .events {
-    @apply md:grid grid-cols-4 gap-12;
+    @apply md:grid grid-cols-2;
 
     .event {
       @apply my-[70px] md:my-0 transition-transform hover:scale-110 cursor-pointer;
+
+      img {
+        @apply w-3/4 mx-auto;
+      }
 
       h4 {
         @apply text-center font-josefin text-white font-bold text-lg mt-[20px] md:text-xl;
