@@ -36,7 +36,7 @@ const Footer = () => {
                 <a
                   href="https://www.facebook.com/Websters-computer-science-society-of-shivaji-college-570701389635945/"
                   target="_blank"
-                  rel="no-referrer"
+                  rel="noreferrer"
                   className="flex items-center text-gray-500 hover:text-white transition-colors"
                 >
                   <Facebook />
@@ -47,7 +47,7 @@ const Footer = () => {
                 <a
                   href="https://www.instagram.com/websters_shivaji/"
                   target="_blank"
-                  rel="no-referrer"
+                  rel="noreferrer"
                   className="flex items-center text-gray-500 hover:text-white transition-colors"
                 >
                   <Instagram />
@@ -58,7 +58,7 @@ const Footer = () => {
                 <a
                   href="https://www.linkedin.com/company/75458309/"
                   target="_blank"
-                  rel="no-referrer"
+                  rel="noreferrer"
                   className="flex items-center text-gray-500 hover:text-white transition-colors"
                 >
                   <Linkedin />
