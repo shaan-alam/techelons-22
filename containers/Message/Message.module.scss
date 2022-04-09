@@ -1,28 +1,26 @@
-.message_section {
-  @apply w-screen h-auto relative my-[70px];
-}
+
 
 .container {
-  @apply w-[90%] sm:w-[70%] mx-auto;
+  @apply h-auto;
 
   h1 {
     @apply mb-[70px] text-center font-montserrat text-white font-bold text-lg sm:text-3xl uppercase;
   }
 
   .parallax_container {
-    @apply font-bold font-montserrat text-gray-600 opacity-[30%] sm:text-[4rem] text-[3rem] absolute top-[13rem] right-0 -z-50;
+    @apply font-bold font-montserrat text-gray-600 opacity-[30%] text-[2rem] absolute top-[30rem] right-[50%] -z-50;
   }
 }
 
 .grid {
   @apply my-[70px] flex flex-col md:flex-row;
 
-  &:nth-child(odd) {
+  &.reverse{
     @apply flex-col-reverse md:flex-row;
   }
 
   .teacher_pic {
-    @apply w-3/4 mx-12 md:my-0;
+    @apply w-3/4 mx-12 md:my-0 my-8;
   }
 
   .message {
