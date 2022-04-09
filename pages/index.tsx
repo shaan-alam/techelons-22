@@ -55,14 +55,14 @@ const Home = () => {
           <img
             src="./images/drive.svg"
             alt="drive"
-            className="opacity-10 h-10"
+            className="opacity-30 h-10"
           />
         </Parallax>
         <Parallax
           speed={30}
           className="absolute top-[84rem] left-[2rem] -z-50"
         >
-          <img src="./images/cpu.svg" alt="cpu" className="opacity-10 h-15" />
+          <img src="./images/cpu.svg" alt="cpu" className="opacity-40 h-15" />
         </Parallax>
 
         <Hero />

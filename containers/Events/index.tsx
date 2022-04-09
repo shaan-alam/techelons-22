@@ -7,11 +7,7 @@ const Events = () => {
   return (
     <section className={eventStyles.container} id="events">
       <h1>Our Events</h1>
-      <Parallax
-        speed={-20}
-        rotate={[-100, 100]}
-        className={eventStyles.parallax_container}
-      >
+      <Parallax speed={-20} className={eventStyles.parallax_container}>
         <h2>🔥</h2>
       </Parallax>
       <div className={eventStyles.events}>
