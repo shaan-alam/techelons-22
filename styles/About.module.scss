@@ -1,5 +1,9 @@
 .container {
   @apply w-[90%] sm:w-[70%] mx-auto my-12;
+
+  h1 {
+    @apply text-white font-montserrat text-3xl text-center uppercase font-bold mb-8;
+  }
 }
 
 .meet_team {
@@ -19,7 +23,7 @@
   .core_members {
     margin: 70px 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
     grid-gap: 4rem;
   }
 
