@@ -1,0 +1,22 @@
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background: #fff;
+    transition: transform 0.6s;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
