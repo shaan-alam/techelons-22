@@ -38,25 +38,29 @@ const Navbar = () => {
       animate="visible"
     >
       <div className={NavbarStyles.nav__container}>
-        <motion.div
-          className={NavbarStyles.logo}
-          variants={logoVariant}
-          initial="hidden"
-          animate="visible"
-        >
-          <img
-            src={`./images/${!navActive ? "small_logo.svg" : "logo_black.svg"}`}
-            alt="Techelons"
-            className="w-8 h-8"
-          />
-          <h1
-            className={`hidden sm:block font-montserrat font-bold ${
-              navActive ? "text-black" : "text-white"
-            }`}
+        <Link href="/">
+          <motion.div
+            className={NavbarStyles.logo}
+            variants={logoVariant}
+            initial="hidden"
+            animate="visible"
           >
-            TECHELONS
-          </h1>
-        </motion.div>
+            <img
+              src={`./images/${
+                !navActive ? "small_logo.svg" : "logo_black.svg"
+              }`}
+              alt="Techelons"
+              className="w-8 h-8"
+            />
+            <h1
+              className={`hidden sm:block font-montserrat font-bold ${
+                navActive ? "text-black" : "text-white"
+              }`}
+            >
+              TECHELONS
+            </h1>
+          </motion.div>
+        </Link>
         <div className={NavbarStyles.nav__menu}>
           <div
             className={`${NavbarStyles.nav_toggler} ${

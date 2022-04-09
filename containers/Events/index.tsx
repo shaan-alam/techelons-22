@@ -14,7 +14,7 @@ const Events = ({ events }: Props) => {
       <div className={eventStyles.events}>
         {events.map((event) => (
           <Parallax speed={Math.random() * 5 + 10} key={event.name}>
-            <Link href={"/events"}>
+            <Link href={`/events/${event.slug}`}>
               <div className={eventStyles.event}>
                 <LazyImage
                   placeholder={event.poster}

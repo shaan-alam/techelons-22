@@ -3,6 +3,7 @@ export interface Event {
   poster: string;
   caption: string;
   registrationLink: string;
+  slug: string
 }
 
 export interface Props {

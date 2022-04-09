@@ -5,6 +5,7 @@ import { pageTransition } from "../animations";
 import { GetStaticProps } from "next";
 import sanityClient from "../sanityClient";
 import { Message } from "../containers";
+import Layout from "../components/Layout";
 
 interface Member {
   name: string;
@@ -32,6 +33,7 @@ const About = ({
   return (
     <>
       <Navbar />
+      <Layout title="About Us - Techelons'22" />
       <motion.section
         className={aboutStyles.container}
         variants={pageTransition}

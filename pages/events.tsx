@@ -6,7 +6,7 @@ import { pageTransition } from "../animations";
 
 const Events = () => {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <>
       <Navbar />
       <motion.section
         className="h-auto"
@@ -74,7 +74,7 @@ const Events = () => {
           </div>
         </div>
       </motion.section>
-    </AnimatePresence>
+    </>
   );
 };
 

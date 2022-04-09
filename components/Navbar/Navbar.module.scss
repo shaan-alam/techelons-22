@@ -7,7 +7,7 @@
 }
 
 .logo {
-  @apply relative z-20 flex items-center justify-between w-[15%];
+  @apply relative z-20 flex items-center justify-between w-[15%] cursor-pointer;
 }
 
 .nav__menu {
@@ -60,7 +60,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 45vh;
+    height: 35vh;
     width: 100%;
     transform-origin: top;
     background: #fff;
@@ -73,7 +73,6 @@
 
   .nav__menu_list {
     @apply text-white w-1/2 ml-auto list-none flex justify-between items-center;
-    // opacity: 1;
 
     @media screen and (max-width: 1200px) {
       @apply w-3/4;
@@ -89,7 +88,7 @@
           margin-top: 30px;
           position: fixed;
           left: 0;
-          height: 30vh;
+          height: 20vh;
           width: 100%;
           z-index: 18;
           justify-content: space-around;
