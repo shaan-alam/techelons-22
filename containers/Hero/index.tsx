@@ -64,7 +64,6 @@ const Hero = () => {
               </Link>
             </div>
           </div>
-          <Logo />
         </div>
       </main>
     </section>

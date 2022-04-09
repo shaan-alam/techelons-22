@@ -16,19 +16,17 @@ const Message = () => {
         </Parallax>
         <div className={messageStyles.grid}>
           <div className={messageStyles.teacher_pic}>
-            <Parallax speed={0} scale={[0.8, 1, "ease"]}>
-              <LazyImage
-                placeholder={
-                  "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                }
-                uri={
-                  "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                }
-                render={(src, style) => (
-                  <img src={src} style={style} className={messageStyles.img} />
-                )}
-              />
-            </Parallax>
+            <LazyImage
+              placeholder={
+                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              }
+              uri={
+                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              }
+              render={(src, style) => (
+                <img src={src} style={style} className={messageStyles.img} />
+              )}
+            />
           </div>
           <div className={messageStyles.message}>
             <Parallax speed={5} opacity={[0.3, 1, "ease"]}>
@@ -50,7 +48,7 @@ const Message = () => {
         </div>
         <div className={messageStyles.grid}>
           <div className={messageStyles.message}>
-            <Parallax speed={-5}>
+            <Parallax speed={5} opacity={[0.3, 1, "ease"]}>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Tempore doloremque ab vitae, eos maiores architecto asperiores
@@ -67,19 +65,17 @@ const Message = () => {
             </Parallax>
           </div>
           <div className={messageStyles.teacher_pic}>
-            <Parallax speed={-5} scale={[0.8, 1, "ease"]}>
-              <LazyImage
-                placeholder={
-                  "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                }
-                uri={
-                  "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                }
-                render={(src, style) => (
-                  <img src={src} style={style} className={messageStyles.img} />
-                )}
-              />
-            </Parallax>
+            <LazyImage
+              placeholder={
+                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              }
+              uri={
+                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              }
+              render={(src, style) => (
+                <img src={src} style={style} className={messageStyles.img} />
+              )}
+            />
           </div>
         </div>
       </div>
