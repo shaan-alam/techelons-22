@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import Head from "next/head";
 import { pageTransition } from "../animations";
 import { Events, Hero } from "../containers";
 import { Navbar, ParallaxImages } from "../components";
@@ -37,7 +36,6 @@ export const getStaticProps: GetStaticProps = async () => {
     "slug": slug.current
   }`);
 
-  console.log(events);
   return {
     props: {
       events,

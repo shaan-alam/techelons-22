@@ -1,4 +1,5 @@
 import { Parallax } from "react-scroll-parallax";
+import { code, laptop, drive, cpu, logo, small_logo } from "../../assets/images";
 
 const ParallaxImages = () => {
   return (
@@ -9,11 +10,7 @@ const ParallaxImages = () => {
         rotateZ={[-100, 20]}
         className="absolute top-[34rem] left-[5rem] md:left-[14rem] -z-50"
       >
-        <img
-          src="./images/code.svg"
-          alt="Code"
-          className="opacity-20 w-10 sm:w-16"
-        />
+        <img src={code} alt="Code" className="opacity-20 w-10 sm:w-16" />
       </Parallax>
       <Parallax
         speed={10}
@@ -21,23 +18,22 @@ const ParallaxImages = () => {
         rotateZ={[-100, 100]}
         className="absolute top-[40rem] right-[2rem] md:right-[14rem] -z-50"
       >
-        <img src="./images/cpu.svg" alt="cpu" className=" opacity-20 w-20" />
+        <img src={cpu} alt="cpu" className=" opacity-20 w-20" />
       </Parallax>
       <Parallax
         speed={30}
         className="absolute w-20 sm:2-24 top-[78rem] right-[3rem] sm:right-[12rem]"
       >
-        <img
-          src="./images/laptop.svg"
-          alt="laptop"
-          className="opacity-30 h-20"
-        />
+        <img src={laptop} alt={laptop} className="opacity-30 h-20" />
       </Parallax>
       <Parallax speed={-20} className="absolute top-[71rem] left-[12rem]">
-        <img src="./images/drive.svg" alt="drive" className="opacity-30 h-10" />
+        <img src={drive} alt="drive" className="opacity-30 h-10" />
       </Parallax>
-      <Parallax speed={56} className="absolute top-[90rem] left-[40rem] -z-50">
-        <img src="./images/cpu.svg" alt="cpu" className="opacity-40 h-15" />
+      <Parallax speed={56} className="absolute top-[40rem] left-[40rem] -z-50">
+        <img src={cpu} alt="cpu" className="opacity-40 h-15" />
+      </Parallax>
+      <Parallax speed={-56} className="absolute top-[20rem] left-[10rem] -z-50">
+        <img src={small_logo} alt="cpu" className="opacity-40 w-16" />
       </Parallax>
       <Parallax
         speed={50}

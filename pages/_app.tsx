@@ -1,14 +1,13 @@
 import "../styles/globals.scss";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
-import { AnimatePresence } from "framer-motion";
+import { ParallaxProvider } from "react-scroll-parallax";
+import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <ParallaxProvider>
-        <AnimatePresence exitBeforeEnter>
-          <Component {...pageProps} />
-        </AnimatePresence>
+        <NextNProgress color="#F5095F" />
+        <Component {...pageProps} />
       </ParallaxProvider>
     </>
   );

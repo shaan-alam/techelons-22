@@ -1,4 +1,4 @@
-import { Navbar, ProfileCard } from "../components";
+import { Navbar, ParallaxImages, ProfileCard } from "../components";
 import aboutStyles from "../styles/About.module.scss";
 import { motion } from "framer-motion";
 import { pageTransition } from "../animations";
@@ -34,6 +34,7 @@ const About = ({
     <>
       <Navbar />
       <Layout title="About Us - Techelons'22" />
+      <ParallaxImages />
       <motion.section
         className={aboutStyles.container}
         variants={pageTransition}
@@ -42,7 +43,7 @@ const About = ({
       >
         <h1>About Us</h1>
         <div className="block md:grid grid-cols-2 gap-8 mb-20">
-          <div className="websters flex justify-center">
+          <div className="websters flex justify-center relative overflow-hidden">
             <img
               src="./images/websters_logo.png"
               alt="Websters"
@@ -57,15 +58,15 @@ const About = ({
               error et omnis iste dolores culpa facere.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-              molestiae doloribus similique, dignissimos autem odio quo, nisi
-              facilis a! Autem quae veritatis aut, blanditiis maxime
-              reprehenderit praesentium? Nesciunt.
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+              maiores recusandae aperiam vel autem repellat assumenda ipsam
+              quibusdam ab quos, consequatur nam aut corrupti est, eius enim
+              laudantium inventore dolorem.
             </p>
           </div>
         </div>
-        <Message />
       </motion.section>
+      <Message />
       <section className={aboutStyles.meet_team}>
         <h1 className="text-white font-montserrat text-3xl text-center uppercase font-bold mb-8">
           Meet Our Team <span role="emoji">♥</span>

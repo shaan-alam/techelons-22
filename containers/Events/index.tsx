@@ -5,6 +5,8 @@ import { Parallax } from "react-scroll-parallax";
 import { Props } from "./types";
 
 const Events = ({ events }: Props) => {
+  const speeds = [1, 3, 20, 7];
+
   return (
     <section className={eventStyles.container} id="events">
       <h1>Our Events</h1>
@@ -12,8 +14,11 @@ const Events = ({ events }: Props) => {
         <h2>WEBSTERS</h2>
       </Parallax>
       <div className={eventStyles.events}>
-        {events.map((event) => (
-          <Parallax speed={Math.random() * 5 + 10} key={event.name}>
+        {events.map((event, index) => (
+          <Parallax
+            speed={speeds[index]}
+            key={event.name}
+          >
             <Link href={`/events/${event.slug}`}>
               <div className={eventStyles.event}>
                 <LazyImage

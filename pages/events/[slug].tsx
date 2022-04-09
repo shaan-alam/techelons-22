@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
 import { pageTransition } from "../../animations";
-import { Button, Navbar } from "../../components";
+import { Button, Navbar, ParallaxImages } from "../../components";
 import eventStyles from "../../styles/Events.module.scss";
 import LazyImage from "react-lazy-blur-image";
 import sanityClient from "../../sanityClient";
@@ -18,6 +18,7 @@ const Event = ({ event }: Props) => {
     <>
       <Layout title={`${event.name} - Techelons'22`} />
       <Navbar />
+      <ParallaxImages />
       <motion.section
         className="h-auto"
         variants={pageTransition}

@@ -1,7 +1,7 @@
 
 
 .container {
-  @apply h-auto;
+  @apply h-auto w-[90%] sm:w-[70%] mx-auto;
 
   h1 {
     @apply mb-[70px] text-center font-montserrat text-white font-bold text-lg sm:text-3xl uppercase;
