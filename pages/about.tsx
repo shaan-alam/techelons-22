@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { pageTransition } from "../animations";
 import { GetStaticProps } from "next";
 import sanityClient from "../sanityClient";
+import { Message } from "../containers";
 
 interface Member {
   name: string;
@@ -37,10 +38,8 @@ const About = ({
         initial="hidden"
         animate="visible"
       >
-        <h1 className="text-white font-montserrat text-3xl text-center uppercase font-bold mb-8">
-          About Us
-        </h1>
-        <div className="block md:grid grid-cols-2 gap-2">
+        <h1>About Us</h1>
+        <div className="block md:grid grid-cols-2 gap-8 mb-20">
           <div className="websters flex justify-center">
             <img
               src="./images/websters_logo.png"
@@ -63,6 +62,7 @@ const About = ({
             </p>
           </div>
         </div>
+        <Message />
       </motion.section>
       <section className={aboutStyles.meet_team}>
         <h1 className="text-white font-montserrat text-3xl text-center uppercase font-bold mb-8">
