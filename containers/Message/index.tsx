@@ -1,19 +1,11 @@
 import messageStyles from "./Message.module.scss";
 import LazyImage from "react-lazy-blur-image";
-import { Parallax } from "react-scroll-parallax";
 
 const Message = () => {
   return (
-    <section className={messageStyles.message_section}>
+    <>
       <div className={messageStyles.container}>
-        <h1>Message from Teacher Incharge</h1>
-        <Parallax
-          speed={25}
-          translateX={[-10, 0]}
-          className={messageStyles.parallax_container}
-        >
-          <h2>MESSAGE FROM TEACHERS</h2>
-        </Parallax>
+        <h1>Message from Teachers</h1>
         <div className={messageStyles.grid}>
           <div className={messageStyles.teacher_pic}>
             <LazyImage
@@ -29,40 +21,34 @@ const Message = () => {
             />
           </div>
           <div className={messageStyles.message}>
-            <Parallax speed={5} opacity={[0.3, 1, "ease"]}>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Tempore doloremque ab vitae, eos maiores architecto asperiores
-                odit nemo facere exercitationem dolore aperiam, amet iste.
-                Voluptate suscipit aspernatur tempora atque aliquam.
-              </p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Tempore doloremque ab vitae, eos maiores architecto asperiores
-                odit nemo facere exercitationem dolore aperiam, amet iste.
-                Voluptate
-              </p>
-              <blockquote>- Preeti Sharma</blockquote>
-            </Parallax>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+              doloremque ab vitae, eos maiores architecto asperiores odit nemo
+              facere exercitationem dolore aperiam, amet iste. Voluptate
+              suscipit aspernatur tempora atque aliquam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+              doloremque ab vitae, eos maiores architecto asperiores odit nemo
+              facere exercitationem dolore aperiam, amet iste. Voluptate
+            </p>
+            <blockquote>- Preeti Sharma</blockquote>
           </div>
         </div>
-        <div className={messageStyles.grid}>
+        <div className={`${messageStyles.grid} ${messageStyles.reverse}`}>
           <div className={messageStyles.message}>
-            <Parallax speed={5} opacity={[0.3, 1, "ease"]}>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Tempore doloremque ab vitae, eos maiores architecto asperiores
-                odit nemo facere exercitationem dolore aperiam, amet iste.
-                Voluptate suscipit aspernatur tempora atque aliquam.
-              </p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Tempore doloremque ab vitae, eos maiores architecto asperiores
-                odit nemo facere exercitationem dolore aperiam, amet iste.
-                Voluptate
-              </p>
-              <blockquote>- Rakesh Yadav</blockquote>
-            </Parallax>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+              doloremque ab vitae, eos maiores architecto asperiores odit nemo
+              facere exercitationem dolore aperiam, amet iste. Voluptate
+              suscipit aspernatur tempora atque aliquam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+              doloremque ab vitae, eos maiores architecto asperiores odit nemo
+              facere exercitationem dolore aperiam, amet iste. Voluptate
+            </p>
+            <blockquote>- Rakesh Yadav</blockquote>
           </div>
           <div className={messageStyles.teacher_pic}>
             <LazyImage
@@ -79,7 +65,7 @@ const Message = () => {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
