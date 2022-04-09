@@ -9,9 +9,15 @@ export default {
       type: "string",
     },
     {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+    },
+    {
       name: "caption",
-      title: "Caption",
-      type: "text",
+      title: "caption",
+      type: "array",
+      of: [{ type: "block" }],
     },
     {
       name: "registrationLink",
