@@ -1,4 +1,5 @@
 import LazyImage from "react-lazy-blur-image";
+import profileStyles from "./ProfleCard.module.scss";
 
 interface Props {
   name: string;
@@ -8,7 +9,7 @@ interface Props {
 
 const ProfileCard = ({ name, designation, imageURL }: Props) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className={profileStyles.profile__wrapper}>
       <LazyImage
         placeholder={imageURL}
         uri={imageURL}
@@ -16,10 +17,8 @@ const ProfileCard = ({ name, designation, imageURL }: Props) => {
           <img src={src} style={style} className="w-3/4" />
         )}
       />
-      <h3 className="font-josefin text-white my-4 text-lg">{name}</h3>
-      <h3 className="font-josefin text-gray-400 text-sm -my-4">
-        {designation}
-      </h3>
+      <h3>{name}</h3>
+      <h4>{designation}</h4>
     </div>
   );
 };
