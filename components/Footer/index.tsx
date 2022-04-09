@@ -15,7 +15,7 @@ const Footer = () => {
               Important Links
             </h2>
             <ul className="font-josefin">
-              <Link href="/about">
+              <Link href="/">
                 <li className="mb-2 text-gray-500 hover:text-white transition-colors">
                   <a>Home</a>
                 </li>
@@ -33,19 +33,34 @@ const Footer = () => {
             </h2>
             <ul className="font-josefin">
               <li className="mb-3">
-                <a href="#!" className="flex items-center text-gray-500 hover:text-white transition-colors">
+                <a
+                  href="https://www.facebook.com/Websters-computer-science-society-of-shivaji-college-570701389635945/"
+                  target="_blank"
+                  rel="no-referrer"
+                  className="flex items-center text-gray-500 hover:text-white transition-colors"
+                >
                   <Facebook />
                   &nbsp;Facebook
                 </a>
               </li>
               <li className="mb-3">
-                <a href="#!" className="flex items-center text-gray-500 hover:text-white transition-colors">
+                <a
+                  href="https://www.instagram.com/websters_shivaji/"
+                  target="_blank"
+                  rel="no-referrer"
+                  className="flex items-center text-gray-500 hover:text-white transition-colors"
+                >
                   <Instagram />
                   &nbsp;Instagram
                 </a>
               </li>
               <li className="mb-3">
-                <a href="#!" className="flex items-center text-gray-500 hover:text-white transition-colors">
+                <a
+                  href="https://www.linkedin.com/company/75458309/"
+                  target="_blank"
+                  rel="no-referrer"
+                  className="flex items-center text-gray-500 hover:text-white transition-colors"
+                >
                   <Linkedin />
                   &nbsp;Linkedin
                 </a>
