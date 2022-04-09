@@ -1,21 +1,29 @@
 .container {
-  @apply w-[90%] sm:w-[70%] mx-auto;
+  @apply w-[90%] sm:w-[70%] mx-auto md:grid grid-cols-2 gap-8;
 
   .main_poster {
     img {
-      @apply w-full md:w-1/2 mx-auto my-12;
-    }
-  }
-
-  .header {
-    @apply flex w-full justify-between items-center pb-4 border-b;
-
-    h1 {
-      @apply font-montserrat text-white text-xl font-bold;
+      @apply w-full mx-auto my-12;
     }
   }
 
   .event_caption {
+    .header {
+      @apply flex w-full justify-between items-center pb-4 border-b my-8;
+
+      h1 {
+        @apply font-montserrat text-white text-xl font-bold;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply text-white;
+    }
     p {
       @apply my-4 text-white font-josefin leading-7;
     }
