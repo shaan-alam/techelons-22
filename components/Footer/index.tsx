@@ -5,7 +5,7 @@ import footerStyles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <>
-      <footer className="w-full bg-black border-t border-gray-700">
+      <footer className="block w-full bg-black border-t border-gray-700">
         <div className="container w-[90%] sm:w-[70%] mx-auto text-white sm:flex justify-between p-8">
           <div className="left w-[50%]">
             <img src="./images/logo.svg" alt="Techelons'22" className="w-3/4" />
