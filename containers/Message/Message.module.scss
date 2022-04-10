@@ -1,5 +1,3 @@
-
-
 .container {
   @apply h-auto w-[90%] sm:w-[70%] mx-auto;
 
@@ -12,11 +10,13 @@
   }
 }
 
-.grid {
-  @apply my-[70px] flex flex-col md:flex-row;
+.teachers_message {
+  .teacher {
+    @apply flex my-[70px] flex-col md:flex-row;
+  }
 
-  &.reverse{
-    @apply flex-col-reverse md:flex-row;
+  .reverse {
+    @apply flex-col md:flex-row-reverse;
   }
 
   .teacher_pic {

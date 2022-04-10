@@ -1,68 +1,48 @@
 import messageStyles from "./Message.module.scss";
 import LazyImage from "react-lazy-blur-image";
+import { GetStaticProps } from "next";
+import sanityClient from "../../sanityClient";
 
-const Message = () => {
+interface Props {
+  teachers: {
+    name: string;
+    message: string;
+    profileImage: string;
+  }[];
+}
+
+const Message = ({ teachers }: Props) => {
   return (
     <>
       <div className={messageStyles.container}>
         <h1>Message from Teachers</h1>
-        <div className={messageStyles.grid}>
-          <div className={messageStyles.teacher_pic}>
-            <LazyImage
-              placeholder={
-                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              }
-              uri={
-                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              }
-              render={(src, style) => (
-                <img src={src} style={style} className={messageStyles.img} />
-              )}
-            />
-          </div>
-          <div className={messageStyles.message}>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              doloremque ab vitae, eos maiores architecto asperiores odit nemo
-              facere exercitationem dolore aperiam, amet iste. Voluptate
-              suscipit aspernatur tempora atque aliquam.
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              doloremque ab vitae, eos maiores architecto asperiores odit nemo
-              facere exercitationem dolore aperiam, amet iste. Voluptate
-            </p>
-            <blockquote>- Preeti Sharma</blockquote>
-          </div>
-        </div>
-        <div className={`${messageStyles.grid} ${messageStyles.reverse}`}>
-          <div className={messageStyles.message}>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              doloremque ab vitae, eos maiores architecto asperiores odit nemo
-              facere exercitationem dolore aperiam, amet iste. Voluptate
-              suscipit aspernatur tempora atque aliquam.
-            </p>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              doloremque ab vitae, eos maiores architecto asperiores odit nemo
-              facere exercitationem dolore aperiam, amet iste. Voluptate
-            </p>
-            <blockquote>- Rakesh Yadav</blockquote>
-          </div>
-          <div className={messageStyles.teacher_pic}>
-            <LazyImage
-              placeholder={
-                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              }
-              uri={
-                "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              }
-              render={(src, style) => (
-                <img src={src} style={style} className={messageStyles.img} />
-              )}
-            />
-          </div>
+        <div className={messageStyles.teachers_message}>
+          {teachers.map((teacher, index) => (
+            <div
+              className={`${messageStyles.teacher} ${
+                index % 2 != 0 ? messageStyles.reverse : ""
+              } `}
+              key={teacher.name}
+            >
+              <div className={messageStyles.teacher_pic}>
+                <LazyImage
+                  placeholder={teacher.profileImage}
+                  uri={teacher.profileImage}
+                  render={(src, style) => (
+                    <img
+                      src={src}
+                      style={style}
+                      className={messageStyles.img}
+                    />
+                  )}
+                />
+              </div>
+              <div className={messageStyles.message}>
+                <p>{teacher.message}</p>
+                <blockquote>- {teacher.name}</blockquote>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
@@ -70,3 +50,11 @@ const Message = () => {
 };
 
 export default Message;
+
+export const getStaticProps: GetStaticProps = async () => {
+  return {
+    props: {
+      teachers,
+    },
+  };
+};

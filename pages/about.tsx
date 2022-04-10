@@ -18,6 +18,11 @@ interface Props {
   vicePresidents: Member[];
   officeBearers: Member[];
   coreMembers: Member[];
+  teachers: {
+    name: string;
+    message: string;
+    profileImage: string;
+  }[];
 }
 
 const About = ({
@@ -25,6 +30,7 @@ const About = ({
   vicePresidents,
   officeBearers,
   coreMembers,
+  teachers
 }: Props) => {
   let temp = coreMembers[0];
   coreMembers[0] = coreMembers[5];
@@ -66,7 +72,7 @@ const About = ({
           </div>
         </div>
       </motion.section>
-      <Message />
+      <Message teachers={teachers} />
       <section className={aboutStyles.meet_team}>
         <h1 className="text-white font-montserrat text-3xl text-center uppercase font-bold mb-8">
           Meet Our Team <span role="emoji">♥</span>
@@ -140,12 +146,19 @@ export const getStaticProps: GetStaticProps = async () => {
     "profileImage": profileImage.asset->url
   }`);
 
+  const teachers = await sanityClient.fetch(`*[_type == 'teacher'] {
+    name,
+    message,
+    "profileImage": profileImage.asset->url
+  }`);
+
   return {
     props: {
       president: president[0],
       vicePresidents,
       officeBearers,
       coreMembers,
+      teachers,
     },
   };
 };
