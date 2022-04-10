@@ -4,6 +4,7 @@ export interface Event {
   caption: string;
   registrationLink: string;
   slug: string
+  description: string
 }
 
 export interface Props {

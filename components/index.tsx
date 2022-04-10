@@ -3,3 +3,4 @@ export { default as Button } from "./Button";
 export { default as Logo } from "./Logo";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as ParallaxImages } from "./ParallaxImages";
+export { default as EventCard } from './EventCard';

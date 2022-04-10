@@ -20,6 +20,11 @@ export default {
       of: [{ type: "block" }],
     },
     {
+      name: 'description',
+      title: "Description",
+      type: "text"
+    },
+    {
       name: "registrationLink",
       title: "Registration Link",
       type: "string",

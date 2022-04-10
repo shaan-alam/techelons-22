@@ -33,7 +33,8 @@ export const getStaticProps: GetStaticProps = async () => {
     name,
     caption,
     "poster": poster.asset->url,
-    "slug": slug.current
+    "slug": slug.current,
+    description
   }`);
 
   return {
