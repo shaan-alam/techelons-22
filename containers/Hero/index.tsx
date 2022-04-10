@@ -1,6 +1,6 @@
 import { Button, Logo } from "../../components";
 import { motion } from "framer-motion";
-import homeStyles from "../../styles/Home.module.scss";
+import heroStyles from "./Hero.module.scss";
 import { container, item } from "./constants";
 import { v4 } from "uuid";
 import { Link } from "react-scroll";
@@ -8,17 +8,17 @@ import { Link } from "react-scroll";
 const Hero = () => {
   return (
     <section id="home">
-      <div className={homeStyles.bg_image}></div>
-      <main className={homeStyles.container}>
+      <div className={heroStyles.bg_image}></div>
+      <main className={heroStyles.container}>
         <motion.div
-          className={homeStyles.bg_backdrop}
+          className={heroStyles.bg_backdrop}
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           transition={{ delay: 3, duration: 1.5, ease: [0.3, 0.4, 0.6, 0.2] }}
         ></motion.div>
-        <div className={homeStyles.hero}>
-          <div className={homeStyles.left}>
-            <h1 className={homeStyles.intro_title}>
+        <div className={heroStyles.hero}>
+          <div className={heroStyles.left}>
+            <h1 className={heroStyles.intro_title}>
               <motion.div
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -29,7 +29,7 @@ const Hero = () => {
               </motion.div>
             </h1>
             <motion.h1
-              className={homeStyles.main_title}
+              className={heroStyles.main_title}
               variants={container}
               initial="hidden"
               animate="animate"
@@ -42,7 +42,7 @@ const Hero = () => {
               ))}
             </motion.h1>
             <motion.p
-              className={homeStyles.intro_text}
+              className={heroStyles.intro_text}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 2 }}
@@ -52,7 +52,7 @@ const Hero = () => {
               Science Department in a way that helps them grow through various
               activities and opportunities.
             </motion.p>
-            <div className={homeStyles.cta}>
+            <div className={heroStyles.cta}>
               <Link to="events" smooth={true}>
                 <Button
                   initial={{ opacity: 0 }}
