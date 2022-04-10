@@ -1,7 +1,5 @@
 import messageStyles from "./Message.module.scss";
 import LazyImage from "react-lazy-blur-image";
-import { GetStaticProps } from "next";
-import sanityClient from "../../sanityClient";
 
 interface Props {
   teachers: {
@@ -50,11 +48,3 @@ const Message = ({ teachers }: Props) => {
 };
 
 export default Message;
-
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      teachers,
-    },
-  };
-};
