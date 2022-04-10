@@ -5,7 +5,7 @@ import footerStyles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <>
-      <footer className="block w-full bg-black border-t border-gray-700">
+      <footer className="block w-full bg-black border-t border-[#121212]">
         <div className="container w-[90%] sm:w-[70%] mx-auto text-white sm:flex justify-between p-8">
           <div className="left w-[50%]">
             <img src="./images/logo.svg" alt="Techelons'22" className="w-3/4" />
@@ -16,12 +16,12 @@ const Footer = () => {
             </h2>
             <ul className="font-josefin">
               <Link href="/">
-                <li className="mb-2 text-gray-500 hover:text-white transition-colors">
+                <li className="mb-2 text-gray-500 hover:text-white transition-colors cursor-pointer">
                   <a>Home</a>
                 </li>
               </Link>
               <Link href="/about">
-                <li className="mb-2 text-gray-500 hover:text-white transition-colors">
+                <li className="mb-2 text-gray-500 hover:text-white transition-colors cursor-pointer">
                   <a>About</a>
                 </li>
               </Link>
@@ -68,14 +68,14 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="text-center text-white font-josefin bg-[#121212] py-2">
-          <h1 className="mb-2 text-gray-200">
-            Made with ♥ by{" "}
-            <span className="text-white font-montserrat font-semibold">
+        <div className="text-center text-white font-josefin bg-[#0a0a0a] py-3">
+          <h1 className="mb-2 text-gray-200 text-sm">
+            Made with ♥ by&nbsp;
+            <a href="https://github.com/shaan-alam" target="_blank" rel="noreferrer" className="text-white font-josefin font-medium">
               Shaan Alam
-            </span>
+            </a>
           </h1>
-          <h3 className="text-gray-600">&#169; All Rights Reserved</h3>
+          <h3 className="text-gray-600 text-[12px]">&#169; All Rights Reserved</h3>
         </div>
       </footer>
     </>
