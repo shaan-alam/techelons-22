@@ -1,8 +1,5 @@
 .event {
-  height: auto;
-  width: 400px;
-  display: block;
-  @apply my-[70px] md:my-0 transition-transform hover:scale-105 cursor-pointer bg-[#0a0a0a] rounded-md mx-auto;
+  @apply my-[70px] md:my-0 transition-transform hover:scale-105 cursor-pointer bg-[#0a0a0a] rounded-md mx-auto sm:w-[400px] w-[100%] h-auto;
 
   img {
     @apply w-full mx-auto;
@@ -10,7 +7,7 @@
 
   .event_body {
     @apply p-4;
-    
+
     h4 {
       @apply text-center font-montserrat font-bold uppercase text-white text-lg my-[1rem] md:text-xl;
     }
