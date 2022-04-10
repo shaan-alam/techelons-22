@@ -1,5 +1,12 @@
 import { Parallax } from "react-scroll-parallax";
-import { code, laptop, drive, cpu, logo, small_logo } from "../../assets/images";
+import {
+  code,
+  laptop,
+  drive,
+  cpu,
+  logo,
+  small_logo,
+} from "../../assets/images";
 
 const ParallaxImages = () => {
   return (
@@ -29,31 +36,12 @@ const ParallaxImages = () => {
       <Parallax speed={-20} className="absolute top-[71rem] left-[12rem]">
         <img src={drive} alt="drive" className="opacity-30 h-10" />
       </Parallax>
-      <Parallax speed={56} className="absolute top-[40rem] left-[40rem] -z-50">
-        <img src={cpu} alt="cpu" className="opacity-40 h-15" />
-      </Parallax>
-      <Parallax speed={-56} className="absolute top-[20rem] left-[10rem] -z-50">
-        <img src={small_logo} alt="cpu" className="opacity-40 w-16" />
-      </Parallax>
-      <Parallax
-        speed={50}
-        scale={[2, 0.5, "easeIn"]}
-        className="absolute top-[80rem] left-[2rem] -z-50"
-      >
-        <h2 className="font-bold font-montserrat text-gray-600 opacity-[30%] text-[1rem]">
-          WEBSTERS
-        </h2>
-      </Parallax>
+
       <Parallax
         speed={-30}
         scale={[0.1, 2, "ease"]}
-        className="absolute top-[120rem] right-[2rem] -z-50"
+        className="absolute top-[120rem] right-[3rem] -z-50"
       >
-        <h2 className="font-bold font-montserrat text-gray-600 opacity-[30%] text-[1rem]">
-          WEBSTERS
-        </h2>
-      </Parallax>
-      <Parallax speed={-50} className="absolute top-[80rem] left-[2rem] -z-50">
         <h2 className="font-bold font-montserrat text-gray-600 opacity-[30%] text-[1rem]">
           WEBSTERS
         </h2>

@@ -10,15 +10,9 @@ const Events = ({ events }: Props) => {
   return (
     <section className={eventStyles.container} id="events">
       <h1>Our Events</h1>
-      <Parallax speed={-20} className={eventStyles.parallax_container}>
-        <h2>WEBSTERS</h2>
-      </Parallax>
       <div className={eventStyles.events}>
         {events.map((event, index) => (
-          <Parallax
-            speed={speeds[index]}
-            key={event.name}
-          >
+          <Parallax speed={speeds[index]} key={event.name}>
             <Link href={`/events/${event.slug}`}>
               <div className={eventStyles.event}>
                 <LazyImage
