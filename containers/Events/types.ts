@@ -4,7 +4,7 @@ export interface Event {
   caption: string;
   registrationLink: string;
   slug: string
-  description: string
+  tagLine: string
 }
 
 export interface Props {

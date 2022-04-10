@@ -16,7 +16,7 @@ const EventCard = ({ event }: Props) => {
       />
       <div className={eventStyles.event_body}>
       <h4>{event.name}</h4>
-        <p>{event.description}</p>
+        <p>{event.tagLine}</p>
       </div>
     </div>
   );

@@ -14,15 +14,15 @@ export default {
       type: "slug",
     },
     {
+      name: "tagLine",
+      title: "Tag Line",
+      type: "string",
+    },
+    {
       name: "caption",
       title: "caption",
       type: "array",
       of: [{ type: "block" }],
-    },
-    {
-      name: 'description',
-      title: "Description",
-      type: "text"
     },
     {
       name: "registrationLink",
