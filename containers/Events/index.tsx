@@ -6,7 +6,7 @@ import { Props } from "./types";
 import { EventCard } from "../../components";
 
 const Events = ({ events }: Props) => {
-  const speeds = [1, 20, 20, 7];
+  const speeds = [1, 10, 20, 7];
 
   return (
     <section className={eventStyles.container} id="events">

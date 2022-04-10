@@ -70,12 +70,23 @@ const Footer = () => {
         </div>
         <div className="text-center text-white font-josefin bg-[#0a0a0a] py-3">
           <h1 className="mb-2 text-gray-200 text-sm">
-            Made with ♥ by&nbsp;
-            <a href="https://github.com/shaan-alam" target="_blank" rel="noreferrer" className="text-white font-josefin font-medium">
+            Made with{" "}
+            <span role="img" aria-label="heart">
+            💖
+            </span>{" "}
+            by&nbsp;
+            <a
+              href="https://github.com/shaan-alam"
+              target="_blank"
+              rel="noreferrer"
+              className="text-white font-josefin font-medium"
+            >
               Shaan Alam
             </a>
           </h1>
-          <h3 className="text-gray-600 text-[12px]">&#169; All Rights Reserved</h3>
+          <h3 className="text-gray-600 text-[12px]">
+            &#169; All Rights Reserved
+          </h3>
         </div>
       </footer>
     </>
