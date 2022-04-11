@@ -1,19 +1,22 @@
 .event {
-  @apply my-[70px] md:my-0 transition-transform hover:scale-105 cursor-pointer bg-[#0a0a0a] rounded-md mx-auto sm:w-[400px] w-[100%] h-auto;
+  @apply my-[70px] md:my-0 transition-transform hover:scale-105 cursor-pointer bg-[#0a0a0a] rounded-md mx-auto w-3/4;
 
-  img {
-    @apply w-full mx-auto;
+  .event_poster {
+    @apply w-full;
+    img {
+      @apply mx-auto;
+    }
   }
 
   .event_body {
     @apply p-4;
 
     h4 {
-      @apply text-center font-montserrat font-bold uppercase text-white text-lg my-[1rem] md:text-xl;
+      @apply text-center font-epilogue font-bold uppercase text-white text-lg my-[1rem] md:text-xl;
     }
 
     p {
-      @apply font-josefin w-full text-center mb-4 text-sm leading-7 text-gray-300;
+      @apply font-work w-full text-center mb-4 text-sm leading-7 text-gray-300;
     }
   }
 }

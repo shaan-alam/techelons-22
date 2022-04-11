@@ -2,11 +2,11 @@
   @apply h-auto w-[90%] sm:w-[70%] mx-auto;
 
   h1 {
-    @apply mb-[70px] text-center font-montserrat text-white font-bold text-lg sm:text-3xl uppercase;
+    @apply mb-[70px] text-center font-epilogue text-white font-bold text-lg sm:text-3xl uppercase;
   }
 
   .parallax_container {
-    @apply font-bold font-montserrat text-gray-600 opacity-[30%] text-[2rem] absolute top-[30rem] right-[50%] -z-50;
+    @apply font-bold font-epilogue text-gray-600 opacity-[30%] text-[2rem] absolute top-[30rem] right-[50%] -z-50;
   }
 }
 
@@ -24,7 +24,7 @@
   }
 
   .message {
-    @apply text-center md:text-left font-josefin text-white w-full text-sm;
+    @apply text-center md:text-left font-work text-white w-full text-sm;
 
     p {
       @apply leading-7;

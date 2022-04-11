@@ -1,3 +1,3 @@
 .primary {
-  @apply transition-all hover:scale-105 hover:shadow-2xl hover:shadow-[#121212] px-6 py-3 rounded-[2rem] font-montserrat bg-gradient-to-r text-white font-semibold from-[#F5095F] to-[#6d062c] text-sm sm:text-[0.8rem];
+  @apply transition-all hover:scale-105 hover:shadow-2xl hover:shadow-[#121212] px-6 py-3 rounded-md font-epilogue bg-gradient-to-r text-white font-semibold from-[#F5095F] to-[#6d062c] text-sm sm:text-[0.8rem];
 }

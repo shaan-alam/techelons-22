@@ -2,11 +2,11 @@
   @apply w-[90%] sm:w-[70%] mx-auto h-auto my-[3rem];
 
   h1 {
-    @apply text-center font-montserrat text-white font-bold mb-[70px] text-lg sm:text-3xl uppercase;
+    @apply text-center font-epilogue text-white font-bold mb-[70px] text-lg sm:text-3xl uppercase;
   }
   
   .parallax_container {
-    @apply font-bold font-montserrat text-gray-700 opacity-30 sm:text-[3rem] text-[1rem]  absolute top-[32rem] right-[4rem] md:left-[25rem] -z-50;
+    @apply font-bold font-epilogue text-gray-700 opacity-30 sm:text-[3rem] text-[1rem]  absolute top-[32rem] right-[4rem] md:left-[25rem] -z-50;
   }
 
   .laptop {
@@ -14,8 +14,8 @@
   }
 
   .events {
-    @apply md:grid grid-cols-2;
-
-   
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
   }
 }

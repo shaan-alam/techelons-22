@@ -106,8 +106,7 @@
     }
 
     li a {
-      @apply font-josefin;
-      position: relative;
+      @apply font-epilogue uppercase font-semibold text-sm transition-colors hover:text-[#ff5e99] relative;
 
       &:after {
         content: "";
@@ -116,7 +115,7 @@
         right: 0;
         height: 1px;
         width: 100%;
-        background: #fff;
+        background: #ff5e99;
         transition: transform 0.6s;
         transform: scaleX(0);
         transform-origin: left;

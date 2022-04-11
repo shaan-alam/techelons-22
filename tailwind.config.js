@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ["Montserrat", "sans-serif"],
-        josefin: ["Josefin Sans", "sans-serif"],
+        epilogue: ["Epilogue", "sans-serif"],
+        work: ["Work Sans", "sans-serif"],
       },
     },
   },

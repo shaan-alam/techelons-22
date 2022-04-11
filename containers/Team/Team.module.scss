@@ -1,13 +1,9 @@
-.container {
-  @apply w-[90%] sm:w-[70%] mx-auto my-12 h-auto sm:h-[80vh] sm:py-12;
-
-  h1 {
-    @apply text-white font-montserrat text-3xl text-center uppercase font-bold mb-8;
-  }
-}
-
 .meet_team {
   @apply w-[90%] sm:w-[70%] mx-auto my-20;
+
+  .heading {
+    @apply text-white font-epilogue text-3xl text-center uppercase font-bold mb-8;
+  }
 
   .president {
     @apply grid justify-center;
