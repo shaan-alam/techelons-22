@@ -20,7 +20,7 @@ const Navbar = () => {
       });
       menuListControls.start({
         opacity: 1,
-        transition: { delay: 1, ease: "easeIn" },
+        transition: { delay: 0.8, ease: "easeIn" },
       });
     } else {
       menuListControls.start({

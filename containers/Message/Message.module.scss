@@ -15,16 +15,16 @@
     @apply flex my-[70px] flex-col md:flex-row;
   }
 
+  .teacher_pic {
+    @apply flex justify-center;
+  }
+
   .reverse {
     @apply flex-col md:flex-row-reverse;
-
-    .teacher_pic img {
-      @apply md:ml-20;
-    }
   }
 
   .teacher_pic {
-    @apply w-full mx-12 md:my-0 my-8;
+    @apply w-full sm:mx-12 md:my-0 my-8;
 
     img {
       @apply w-3/4;

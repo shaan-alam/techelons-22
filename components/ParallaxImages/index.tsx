@@ -42,7 +42,7 @@ const ParallaxImages = () => {
       <Parallax
         speed={-30}
         scale={[0.1, 2, "ease"]}
-        className="absolute top-[100rem] right-[3rem] -z-1"
+        className="absolute top-[100rem] right-[8em] -z-1"
       >
         <h2 className="font-bold font-montserrat text-gray-600 opacity-[20%] text-[1rem]">
           WEBSTERS
