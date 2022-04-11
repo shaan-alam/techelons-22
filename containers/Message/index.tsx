@@ -1,13 +1,7 @@
 import messageStyles from "./Message.module.scss";
 import LazyImage from "react-lazy-blur-image";
+import { Props } from './types';
 
-interface Props {
-  teachers: {
-    name: string;
-    message: string;
-    profileImage: string;
-  }[];
-}
 
 const Message = ({ teachers }: Props) => {
   return (

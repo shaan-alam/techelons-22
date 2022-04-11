@@ -1,14 +1,14 @@
-import { Button, Logo } from "../../components";
+import { Button } from "../../components";
 import { motion } from "framer-motion";
 import heroStyles from "./Hero.module.scss";
 import { container, item } from "./constants";
 import { v4 } from "uuid";
 import { Link } from "react-scroll";
+import Tilt from "react-parallax-tilt";
 
 const Hero = () => {
   return (
     <section id="home">
-      <div className={heroStyles.bg_image}></div>
       <main className={heroStyles.container}>
         <motion.div
           className={heroStyles.bg_backdrop}
@@ -63,6 +63,15 @@ const Hero = () => {
                 </Button>
               </Link>
             </div>
+          </div>
+          <div className={heroStyles.right}>
+            <Tilt>
+              <img
+                src="./images/small_logo.svg"
+                alt="Techelons"
+                className="w-full"
+              />
+            </Tilt>
           </div>
         </div>
       </main>

@@ -10,6 +10,14 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&family=Montserrat:wght@400;500;700;800&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;800;900&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

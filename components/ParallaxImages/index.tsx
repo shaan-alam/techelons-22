@@ -4,8 +4,6 @@ import {
   laptop,
   drive,
   cpu,
-  logo,
-  small_logo,
 } from "../../assets/images";
 
 const ParallaxImages = () => {

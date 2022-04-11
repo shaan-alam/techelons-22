@@ -1,6 +1,5 @@
 import Link from "next/link";
 import eventStyles from "./Events.module.scss";
-import LazyImage from "react-lazy-blur-image";
 import { Parallax } from "react-scroll-parallax";
 import { Props } from "./types";
 import { EventCard } from "../../components";
