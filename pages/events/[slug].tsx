@@ -49,7 +49,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     await sanityClient.fetch(`*[_type == "event" && slug.current == "${context.params.slug}"] {
     name,
     caption,
-    "poster": poster.asset->url
+    "poster": poster.asset->url,
+    registrationLink
   }`);
 
   return {

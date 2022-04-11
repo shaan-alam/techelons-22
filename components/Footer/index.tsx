@@ -12,7 +12,7 @@ import { logo } from "../../assets/images";
 const Footer = () => {
   return (
     <>
-      <footer className="block w-full bg-black border-t border-[#121212]">
+      <footer className="block w-full bg-transparent border-t border-[#121212]">
         <div className="container w-[90%] sm:w-[70%] mx-auto text-white sm:flex justify-between sm:p-8 py-8">
           <div className="left w-[50%]">
             <img src={logo} alt="Techelons'22" className="w-3/4" />
@@ -81,12 +81,12 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="text-center text-white font-josefin bg-[#0a0a0a] py-3">
+        <div className="text-center text-white font-josefin bg-transparent py-3">
           <h1 className="mb-2 text-gray-200 text-sm">
             Made with{" "}
             <span role="img" aria-label="heart">
               💖
-            </span>{" "}
+            </span>&nbsp;
             by&nbsp;
             <a
               href="https://github.com/shaan-alam"
