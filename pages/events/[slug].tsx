@@ -1,11 +1,10 @@
 import { GetStaticProps } from "next";
-import { Button, Navbar, ParallaxImages } from "../../components";
+import { Button, ParallaxImages } from "../../components";
 import eventStyles from "../../styles/Events.module.scss";
 import LazyImage from "react-lazy-blur-image";
 import sanityClient from "../../sanityClient";
 import { Event } from "../../containers/Events/types";
 import BlockContent from "@sanity/block-content-to-react";
-import Layout from "../../components/Layout";
 import withLayout from "../../HOC/withLayout";
 
 interface Props {

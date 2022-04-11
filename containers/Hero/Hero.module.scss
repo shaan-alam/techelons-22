@@ -34,7 +34,21 @@
     }
 
     .main_title {
-      @apply text-center sm:text-left mt-4 font-epilogue text-4xl sm:text-5xl md:text-6xl lg:text-6xl text-white font-black relative overflow-hidden;
+      @apply text-center sm:text-left mt-4 font-epilogue text-4xl sm:text-5xl md:text-6xl lg:text-6xl  font-black relative overflow-hidden;
+      background: #f7ff00; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #db36a4,
+        #f7ff00
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #db36a4,
+        #f7ff00
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .intro_text {
@@ -43,10 +57,6 @@
 
     .cta {
       @apply mt-8 text-center sm:text-left;
-
-      button {
-        text-transform: uppercase;
-      }
     }
   }
 }
