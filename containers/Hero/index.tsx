@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Button } from "../../components";
 import { motion } from "framer-motion";
 import heroStyles from "./Hero.module.scss";
-import { container, item } from "./constants";
+import { container } from "./constants";
 import { v4 } from "uuid";
 import { Link } from "react-scroll";
 import Tilt from "react-parallax-tilt";
@@ -50,9 +50,7 @@ const Hero = () => {
               transition={{ duration: 1.3 }}
             >
               {"TECHELONS'22".split("").map((ch) => (
-                <motion.span variants={item} key={v4()}>
-                  {ch}
-                </motion.span>
+                <span key={v4()}>{ch}</span>
               ))}
             </motion.h1>
             <motion.p

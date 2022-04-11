@@ -71,7 +71,7 @@ const Navbar = () => {
             className={`${NavbarStyles.nav__menu_list} ${
               navActive ? NavbarStyles.active : ""
             }`}
-            initial={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
             animate={menuListControls}
           >
             <li>

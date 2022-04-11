@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <>
       <footer className="block w-full bg-black border-t border-[#121212]">
-        <div className="container w-[90%] sm:w-[70%] mx-auto text-white sm:flex justify-between p-8">
+        <div className="container w-[90%] sm:w-[70%] mx-auto text-white sm:flex justify-between sm:p-8 py-8">
           <div className="left w-[50%]">
             <img src={logo} alt="Techelons'22" className="w-3/4" />
           </div>

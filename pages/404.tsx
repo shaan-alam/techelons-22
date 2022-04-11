@@ -18,7 +18,7 @@ const NotFound = () => {
       </div>
       <div className="go-back">
         <Link href="/">
-          <a className="text-[12px] sm:text-[1rem] block mt-4  px-6 py-3 rounded-md font-montserrat bg-gradient-to-r text-white font-semibold bg-[#121212]">
+          <a className="block mt-4 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-[#121212] px-6 py-3 rounded-[2rem] font-epilogue text-white font-semibold bg-[#1127f3] text-sm sm:text-[0.8rem]">
             Go Back and Register for Events 😎
           </a>
         </Link>
