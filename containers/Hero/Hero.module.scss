@@ -16,7 +16,7 @@
 }
 
 .hero {
-  @apply relative z-10 sm:flex;
+  @apply relative z-10 sm:flex mt-28 sm:mt-0;
 
   .right {
     @apply sm:items-center sm:justify-center hidden sm:flex;
@@ -38,7 +38,7 @@
     }
 
     .intro_text {
-      @apply text-center sm:text-left mx-auto sm:mx-0 font-work text-sm text-gray-300 mt-4  w-[80%] leading-7;
+      @apply text-center sm:text-left mx-auto sm:mx-0 font-work text-sm text-gray-300 mt-4  w-[100%] leading-7;
     }
 
     .cta {
