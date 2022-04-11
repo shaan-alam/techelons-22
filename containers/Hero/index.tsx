@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Button } from "../../components";
 import { motion } from "framer-motion";
 import heroStyles from "./Hero.module.scss";
@@ -6,7 +7,20 @@ import { v4 } from "uuid";
 import { Link } from "react-scroll";
 import Tilt from "react-parallax-tilt";
 
+interface Quote {
+  author: string;
+  en: string;
+}
+
 const Hero = () => {
+  const [quote, setQuote] = useState<Quote>();
+
+  useEffect(() => {
+    fetch("https://programming-quotes-api.herokuapp.com/Quotes/random")
+      .then((res) => res.json())
+      .then((res) => setQuote(res));
+  }, []);
+
   return (
     <section id="home">
       <main className={heroStyles.container}>
@@ -47,10 +61,8 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1, delay: 2 }}
             >
-              Websters - The Computer Science Society of Shivaji College was
-              formed with one objective- unification of students of the Computer
-              Science Department in a way that helps them grow through various
-              activities and opportunities.
+              {quote?.en}
+              <blockquote>- {quote?.author}</blockquote>
             </motion.p>
             <div className={heroStyles.cta}>
               <Link to="events" smooth={true}>
