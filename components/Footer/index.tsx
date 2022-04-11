@@ -1,6 +1,13 @@
 import Link from "next/link";
-import { Facebook, Instagram, Linkedin } from "react-bootstrap-icons";
+import {
+  Facebook,
+  HouseFill,
+  InfoCircleFill,
+  Instagram,
+  Linkedin,
+} from "react-bootstrap-icons";
 import footerStyles from "./Footer.module.scss";
+import { logo } from "../../assets/images";
 
 const Footer = () => {
   return (
@@ -8,7 +15,7 @@ const Footer = () => {
       <footer className="block w-full bg-black border-t border-[#121212]">
         <div className="container w-[90%] sm:w-[70%] mx-auto text-white sm:flex justify-between p-8">
           <div className="left w-[50%]">
-            <img src="./images/logo.svg" alt="Techelons'22" className="w-3/4" />
+            <img src={logo} alt="Techelons'22" className="w-3/4" />
           </div>
           <div className="middle flex-grow my-12 sm:my-0">
             <h2 className="text-xl font-bold font-montserrat mb-4 text-[0.8rem] md:text-[1rem] lg:text-[1.4rem]">
@@ -17,12 +24,18 @@ const Footer = () => {
             <ul className="font-josefin">
               <Link href="/">
                 <li className="mb-2 text-gray-500 hover:text-white transition-colors cursor-pointer">
-                  <a>Home</a>
+                  <a className="flex items-center">
+                    <HouseFill />
+                    &nbsp; Home
+                  </a>
                 </li>
               </Link>
               <Link href="/about">
                 <li className="mb-2 text-gray-500 hover:text-white transition-colors cursor-pointer">
-                  <a>About</a>
+                  <a className="flex items-center">
+                    <InfoCircleFill />
+                    &nbsp; About Us
+                  </a>
                 </li>
               </Link>
             </ul>
@@ -72,7 +85,7 @@ const Footer = () => {
           <h1 className="mb-2 text-gray-200 text-sm">
             Made with{" "}
             <span role="img" aria-label="heart">
-            💖
+              💖
             </span>{" "}
             by&nbsp;
             <a

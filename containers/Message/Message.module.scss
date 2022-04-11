@@ -17,10 +17,18 @@
 
   .reverse {
     @apply flex-col md:flex-row-reverse;
+
+    .teacher_pic img {
+      @apply md:ml-20;
+    }
   }
 
   .teacher_pic {
-    @apply w-3/4 mx-12 md:my-0 my-8;
+    @apply w-full mx-12 md:my-0 my-8;
+
+    img {
+      @apply w-3/4;
+    }
   }
 
   .message {

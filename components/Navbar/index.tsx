@@ -3,6 +3,7 @@ import NavbarStyles from "./Navbar.module.scss";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
 import { small_logo, logo_black } from "../../assets/images/index";
+import { HouseFill, InfoCircleFill } from "react-bootstrap-icons";
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
@@ -75,12 +76,18 @@ const Navbar = () => {
           >
             <li>
               <Link href="/">
-                <a>Home</a>
+                <a className="flex items-center">
+                  <HouseFill />
+                  &nbsp; Home
+                </a>
               </Link>
             </li>
             <li>
               <Link href="/about">
-                <a>About Us</a>
+                <a className="flex items-center">
+                  <InfoCircleFill />
+                  &nbsp; About Us
+                </a>
               </Link>
             </li>
           </motion.ul>
