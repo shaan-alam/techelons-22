@@ -6,6 +6,7 @@ import sanityClient from "../../sanityClient";
 import { Event } from "../../containers/Events/types";
 import BlockContent from "@sanity/block-content-to-react";
 import Layout from "../../components/Layout";
+import withLayout from "../../HOC/withLayout";
 
 interface Props {
   event: Event;
@@ -14,8 +15,6 @@ interface Props {
 const Event = ({ event }: Props) => {
   return (
     <>
-      <Layout title={`${event.name} - Techelons'22`} />
-      <Navbar />
       <ParallaxImages />
       <div className={eventStyles.container}>
         <div className={eventStyles.main_poster}>
@@ -44,7 +43,7 @@ const Event = ({ event }: Props) => {
   );
 };
 
-export default Event;
+export default withLayout(Event);
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const events =

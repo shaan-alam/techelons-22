@@ -9,8 +9,8 @@ function MyApp({ Component, pageProps }) {
       <ParallaxProvider>
         <div className="h-screen w-full bg-[#000] fixed inset-0 z-[-1]">
           <span className="absolute top-[-7rem] lg:top-[-80%] lg:right-[25vw] h-[200px] w-full lg:h-[600px] lg:w-[600px] bg-gradient-to-r from-[#0719b9] to-[#EE5DB4] filter blur-[100px] opacity-80 rounded-full"></span>
-          {/* <span className="absolute bottom-[-9rem] lg:bottom-[-80%] left-[-10vw] h-[200px] w-full lg:h-[600px] lg:w-[600px] bg-gradient-to-r from-[#50AEF1] to-[#EE5DB4] filter blur-[100px] opacity-50 rounded-full"></span> */}
         </div>
+
         <NextNProgress color="#F5095F" />
         <Component {...pageProps} />
       </ParallaxProvider>

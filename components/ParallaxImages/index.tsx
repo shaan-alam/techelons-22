@@ -1,10 +1,5 @@
 import { Parallax } from "react-scroll-parallax";
-import {
-  code,
-  laptop,
-  drive,
-  cpu,
-} from "../../assets/images";
+import { code, laptop, drive, cpu } from "../../assets/images";
 
 const ParallaxImages = () => {
   return (
@@ -38,9 +33,18 @@ const ParallaxImages = () => {
       <Parallax
         speed={-30}
         scale={[0.1, 2, "ease"]}
-        className="absolute top-[120rem] right-[3rem] -z-50"
+        className="absolute top-[10rem] left-[4rem] -z-1"
       >
-        <h2 className="font-bold font-montserrat text-gray-600 opacity-[30%] text-[1rem]">
+        <h2 className="font-bold font-montserrat text-gray-600 opacity-[20%] text-[0.5rem]">
+          WEBSTERS
+        </h2>
+      </Parallax>
+      <Parallax
+        speed={-30}
+        scale={[0.1, 2, "ease"]}
+        className="absolute top-[100rem] right-[3rem] -z-1"
+      >
+        <h2 className="font-bold font-montserrat text-gray-600 opacity-[20%] text-[1rem]">
           WEBSTERS
         </h2>
       </Parallax>
