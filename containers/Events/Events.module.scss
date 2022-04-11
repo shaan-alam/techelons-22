@@ -4,7 +4,7 @@
   h1 {
     @apply text-center font-epilogue text-white font-bold mb-[70px] text-lg sm:text-3xl uppercase;
   }
-  
+
   .parallax_container {
     @apply font-bold font-epilogue text-gray-700 opacity-30 sm:text-[3rem] text-[1rem]  absolute top-[32rem] right-[4rem] md:left-[25rem] -z-50;
   }
@@ -17,5 +17,15 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2rem;
+
+    @media screen and (max-width: 420px) {
+      display: block;
+      // grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      // justify-content: center;
+
+      .event {
+        // width: 100%;
+      }
+    }
   }
 }
