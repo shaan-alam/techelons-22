@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import sanityClient from "../sanityClient";
 import { Message, About, Team } from "../containers";
-import { Teacher } from "../containers/Message/types";
+import { Teacher } from "../containers/Teachers/types";
 import withLayout from "../HOC/withLayout";
 
 interface Member {

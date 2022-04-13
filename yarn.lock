@@ -2125,10 +2125,10 @@ react-parallax-tilt@^1.6.7:
   resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.6.7.tgz#498cfe3c452c6c8b1fba3a3a6bf04a4a79360e03"
   integrity sha512-S1NQtvqHRPyJPoXZohor959nhh/JLcyOh0e3t5rF4NfOP6RalO1YnT03r3AOqZ38omwmfy5sGwliHIhR6NfqTg==
 
-react-scroll-parallax@^3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-3.0.5.tgz#1d2c3fa39f596faeb40ea6136e004f39d9726647"
-  integrity sha512-2StEKOUEl7INk2B1AtjtsPxcG0aCLu0K9DRg74ecngZF4772qmTNGzG/u/KGfGKo0WXTlJ9eAaQifk6uF6RiyQ==
+react-scroll-parallax@^3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/react-scroll-parallax/-/react-scroll-parallax-3.0.6.tgz#1292d48a971d9577a680b39fff3f7a412ef31e5e"
+  integrity sha512-PcGigEVUZXdmzWCthyuTU3ua+K4zhBxnMXcf76Bw0yvrpFCoFLcQEUVllnfELWvC5oknVL0vS9VzRIQu6sIU8A==
   dependencies:
     parallax-controller "^1.3.5"
 

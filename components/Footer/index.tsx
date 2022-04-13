@@ -9,6 +9,12 @@ import {
 import footerStyles from "./Footer.module.scss";
 import { logo } from "../../assets/images";
 
+/**
+ * @name - Footer
+ * @description Footer Component
+ * @return JSX
+ * */
+
 const Footer = () => {
   return (
     <>
@@ -86,8 +92,8 @@ const Footer = () => {
             Made with{" "}
             <span role="img" aria-label="heart">
               💖
-            </span>&nbsp;
-            by&nbsp;
+            </span>
+            &nbsp; by&nbsp;
             <a
               href="https://github.com/shaan-alam"
               target="_blank"

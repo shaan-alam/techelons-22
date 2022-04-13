@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarStyles from "./Navbar.module.scss";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
@@ -8,8 +8,30 @@ import { HouseFill, InfoCircleFill } from "react-bootstrap-icons";
 const Navbar = () => {
   const [navActive, setNavActive] = useState<boolean>(false);
   const navControls = useAnimation();
+  const logoControls = useAnimation();
   const menuListControls = useAnimation();
 
+  // Animate logo and ul list on first page render
+  useEffect(() => {
+    menuListControls.start({
+      opacity: 1,
+      transition: { delay: 0.5, ease: "easeIn" },
+    });
+
+    logoControls.start({
+      opacity: 1,
+      transition: {
+        delay: 0.3,
+        ease: "easeIn",
+      },
+    });
+  }, []);
+
+  /**
+   * @name toggleNav
+   * @description Function for navbar toggle animation used on smaller screens
+   * @return void
+   * */
   const toggleNav = () => {
     setNavActive(!navActive);
 
@@ -35,7 +57,11 @@ const Navbar = () => {
     <nav className={NavbarStyles.nav}>
       <div className={NavbarStyles.nav__container}>
         <Link href="/">
-          <div className={NavbarStyles.logo}>
+          <motion.div
+            className={NavbarStyles.logo}
+            initial={{ opacity: 0 }}
+            animate={logoControls}
+          >
             <img
               src={!navActive ? small_logo : logo_black}
               alt="Techelons"
@@ -48,7 +74,7 @@ const Navbar = () => {
             >
               TECHELONS
             </h1>
-          </div>
+          </motion.div>
         </Link>
         <div className={NavbarStyles.nav__menu}>
           <div

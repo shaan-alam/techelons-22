@@ -1,0 +1,29 @@
+.container {
+  @apply w-[90%] sm:w-[70%] mx-auto h-auto my-[3rem] relative z-10;
+
+  h1 {
+    @apply text-center font-epilogue font-bold mb-[70px] text-3xl sm:text-5xl uppercase drop-shadow-2xl;
+    background: #ff5101;
+    background: -webkit-linear-gradient(to right, #ffeaa6, #ff5101);
+    background: linear-gradient(to right, #ffeaa6, #ff5101);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .about_techelons {
+    .logo {
+      @apply mx-auto mb-8 flex justify-center;
+
+      img {
+        @apply w-full;
+      }
+    }
+
+    .about_techelons_text {
+      p {
+        @apply text-sm md:text-[1rem] text-white leading-7 text-center;
+      }
+    }
+  }
+}

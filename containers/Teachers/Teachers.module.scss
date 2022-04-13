@@ -1,0 +1,41 @@
+.container {
+  @apply h-auto w-[90%] sm:w-[70%] mx-auto;
+
+  h1 {
+    @apply mb-[70px] text-center font-epilogue text-white font-bold text-lg sm:text-3xl uppercase;
+  }
+
+  .parallax_container {
+    @apply font-bold font-epilogue text-gray-600 opacity-[30%] text-[2rem] absolute top-[30rem] right-[50%] -z-50;
+  }
+}
+
+.teachers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 4rem;
+
+  h2 {
+    @apply font-work text-white text-center mt-8;
+  }
+}
+
+.teacher_pic {
+  @apply w-full lg:mx-12 lg:my-0 my-8;
+
+  img {
+    @apply w-3/4;
+  }
+}
+
+.message {
+  @apply text-center lg:text-left font-work text-white w-full text-sm;
+
+  p {
+    @apply leading-7;
+  }
+
+  blockquote {
+    margin-top: 1rem;
+  }
+}

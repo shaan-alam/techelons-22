@@ -2,6 +2,11 @@ import LazyImage from "react-lazy-blur-image";
 import eventStyles from "./Event.module.scss";
 import { Props } from "./types";
 
+/**
+ * @name - EventCard
+ * @description A card component that is used to render an event on the homepage
+ * @param JSX An object of type {@link Props}
+ * */
 const EventCard = ({ event }: Props) => {
   return (
     <div className={eventStyles.event}>

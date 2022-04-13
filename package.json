@@ -21,7 +21,7 @@
     "react-lazy-blur-image": "^0.1.2",
     "react-parallax-tilt": "^1.6.7",
     "react-scroll": "^1.8.6",
-    "react-scroll-parallax": "^3.0.5",
+    "react-scroll-parallax": "^3.0.6",
     "sass": "^1.49.11",
     "uuid": "^8.3.2"
   },

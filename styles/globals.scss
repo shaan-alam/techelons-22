@@ -7,6 +7,20 @@ body {
   @apply bg-black;
 }
 
+.bg_stars {
+  background: url("../public/images/stars.jpeg");
+  position: absolute;
+  top: 0vh;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: repeat;
+
+  &:nth-child(2) {
+    top: 300vh;
+  }
+}
 /* width */
 ::-webkit-scrollbar {
   width: 7px;

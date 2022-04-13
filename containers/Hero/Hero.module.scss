@@ -1,9 +1,18 @@
 .home {
-  @apply h-auto;
+  background-size: cover;
+  height: 100vh;
 }
 
 .bg_image {
-  @apply absolute inset-0 bg-black opacity-30 z-10;
+  @apply absolute inset-0;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 100%;
+
+    img {
+      transform: scale(1.1);
+    }
+  }
 }
 
 .container {
@@ -16,7 +25,7 @@
 }
 
 .hero {
-  @apply relative z-10 sm:flex mt-28 sm:mt-0;
+  @apply relative z-10 mt-28 sm:mt-0;
 
   .right {
     @apply sm:items-center sm:justify-center hidden sm:flex;
@@ -27,36 +36,28 @@
   }
 
   .left {
-    @apply my-16 sm:my-28 w-full sm:w-[80%];
+    @apply my-28 sm:my-28 w-[100%];
 
     .intro_title {
-      @apply text-center sm:text-left font-work text-[12px] sm:text-sm text-gray-300 relative overflow-hidden;
+      @apply text-center sm:text-center font-work text-[12px] sm:text-sm text-gray-300 relative overflow-hidden;
     }
 
     .main_title {
-      @apply text-center sm:text-left mt-4 font-epilogue text-4xl sm:text-5xl md:text-6xl lg:text-6xl  font-black relative overflow-hidden;
-      background: #9da7fd; /* fallback for old browsers */
-      background: -webkit-linear-gradient(
-        to right,
-        #ff8cd1,
-        #9da7fd
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        to right,
-        #ff8cd1,
-        #9da7fd
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      @apply text-center mb-8 mt-2 font-epilogue text-4xl sm:text-5xl md:text-6xl lg:text-[7rem] font-black text-white drop-shadow-2xl;
+      background: #ff5101;
+      background: -webkit-linear-gradient(to right, #ffd95c, #ff5101);
+      background: linear-gradient(to right, #ffd95c, #ff5101);
 
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .intro_text {
-      @apply text-center sm:text-left mx-auto sm:mx-0 font-work text-sm text-gray-300 mt-4  w-[100%] leading-7;
+      @apply text-center mx-auto font-work text-sm text-white mt-4 w-[100%] leading-7;
     }
 
     .cta {
-      @apply mt-8 text-center sm:text-left;
+      @apply mt-12 text-center sm:text-center;
     }
   }
 }

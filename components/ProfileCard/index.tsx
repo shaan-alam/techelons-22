@@ -1,12 +1,12 @@
 import LazyImage from "react-lazy-blur-image";
 import profileStyles from "./ProfleCard.module.scss";
+import { Props } from "./types";
 
-interface Props {
-  name: string;
-  designation: string;
-  imageURL: string;
-}
-
+/**
+ * @name - ProfileCard
+ * @description - A card component with lazy loading image for team members
+ * @param - An object of type {@link Props}
+*/
 const ProfileCard = ({ name, designation, imageURL }: Props) => {
   return (
     <div className={profileStyles.profile__wrapper}>

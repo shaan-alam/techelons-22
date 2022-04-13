@@ -1,4 +1,4 @@
-import { Events, Hero } from "../containers";
+import { Events, Hero, Techelons } from "../containers";
 import sanityClient from "../sanityClient";
 import { GetStaticProps } from "next";
 import { Props } from "../containers/Events/types";
@@ -8,6 +8,7 @@ const Home = ({ events }: Props) => {
   return (
     <>
       <Hero />
+      <Techelons />
       <Events events={events} />
     </>
   );
