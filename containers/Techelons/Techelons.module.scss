@@ -13,7 +13,7 @@
 
   .about_techelons {
     .logo {
-      @apply mx-auto mb-8 flex justify-center;
+      @apply mb-8 flex justify-center;
 
       img {
         @apply w-full;
@@ -21,9 +21,7 @@
     }
 
     .about_techelons_text {
-      p {
-        @apply text-sm md:text-[1rem] text-white leading-7 text-center font-work;
-      }
+      @apply text-sm md:text-[1rem] text-white leading-7 text-center font-work;
     }
   }
 }

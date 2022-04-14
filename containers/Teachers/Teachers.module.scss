@@ -2,9 +2,15 @@
   @apply h-auto w-[90%] sm:w-[70%] mx-auto;
 
   h1 {
-    @apply mb-[70px] text-center font-epilogue text-white font-bold text-lg sm:text-3xl uppercase;
-  }
+    @apply text-center font-epilogue font-bold my-[100px] text-3xl sm:text-5xl uppercase drop-shadow-2xl;
+    background: #ff5101;
+    background: -webkit-linear-gradient(to right, #ffeaa6, #ff5101);
+    background: linear-gradient(to right, #ffeaa6, #ff5101);
 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
   .parallax_container {
     @apply font-bold font-epilogue text-gray-600 opacity-[30%] text-[2rem] absolute top-[30rem] right-[50%] -z-50;
   }
@@ -21,7 +27,7 @@
 }
 
 .teacher_pic {
-  @apply w-full lg:mx-12 lg:my-0 my-8;
+  @apply w-full lg:mx-12 lg:my-0 my-8 flex flex-col items-center;
 
   img {
     @apply w-3/4;

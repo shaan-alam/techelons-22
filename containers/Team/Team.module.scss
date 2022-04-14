@@ -1,12 +1,17 @@
 .meet_team {
   @apply w-[90%] sm:w-[70%] mx-auto my-20;
 
-  .heading {
-    @apply text-white font-epilogue text-3xl text-center uppercase font-bold mb-8;
+  h1 {
+    @apply text-center font-epilogue font-bold my-[100px] text-3xl sm:text-4xl uppercase drop-shadow-2xl;
+    background: #ff5101;
+    background: -webkit-linear-gradient(to right, #ffeaa6, #ff5101);
+    background: linear-gradient(to right, #ffeaa6, #ff5101);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .president {
-
     img {
       @apply lg:w-1/3;
     }
@@ -17,6 +22,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 4rem;
+
+    img {
+      @apply h-[300px] w-[300px] object-cover;
+    }
   }
 
   .core_members {
@@ -31,5 +40,12 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 4rem;
     margin: 70px 0;
+  }
+
+  .core_members img,
+  .office_bearers img,
+  .president img,
+  .vice_presidents img {
+    @apply w-[300px] h-[300px] object-cover;
   }
 }

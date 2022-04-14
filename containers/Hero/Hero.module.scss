@@ -1,6 +1,19 @@
+.loading {
+  @apply fixed z-[100] inset-0 bg-black h-screen w-full flex flex-col items-center justify-center text-white;
+
+  h2 {
+    @apply font-epilogue text-3xl font-bold uppercase mt-8;
+  }
+}
+
 .home {
   background-size: cover;
   height: 100vh;
+  background: url("../../public/images/stars.jpeg");
+  z-index: 10;
+  width: 100%;
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 .bg_image {
@@ -27,16 +40,8 @@
 .hero {
   @apply relative z-10 mt-28 sm:mt-0;
 
-  .right {
-    @apply sm:items-center sm:justify-center hidden sm:flex;
-
-    img {
-      @apply mx-12;
-    }
-  }
-
-  .left {
-    @apply my-28 sm:my-28 w-[100%];
+  .hero_Contents {
+    @apply my-28 w-[100%];
 
     .intro_title {
       @apply text-center sm:text-center font-work text-[12px] sm:text-sm text-gray-300 relative overflow-hidden;
@@ -57,7 +62,7 @@
     }
 
     .cta {
-      @apply mt-12 text-center sm:text-center;
+      @apply mt-4 text-center sm:text-center;
     }
   }
 }

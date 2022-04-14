@@ -4,6 +4,11 @@ import { Message, About, Team } from "../containers";
 import { Teacher } from "../containers/Teachers/types";
 import withLayout from "../HOC/withLayout";
 
+interface AboutWebster {
+  name: string;
+  about: Record<any, any>;
+}
+
 interface Member {
   name: string;
   designation: string;
@@ -16,6 +21,7 @@ interface Props {
   officeBearers: Member[];
   coreMembers: Member[];
   teachers: Teacher[];
+  about: AboutWebster;
 }
 
 const AboutUs = ({
@@ -24,6 +30,7 @@ const AboutUs = ({
   officeBearers,
   coreMembers,
   teachers,
+  about,
 }: Props) => {
   let temp = coreMembers[0];
   coreMembers[0] = coreMembers[5];
@@ -31,7 +38,7 @@ const AboutUs = ({
 
   return (
     <>
-      <About />
+      <About about={about} />
       <Message teachers={teachers} />
       <Team team={{ president, vicePresidents, officeBearers, coreMembers }} />
     </>
@@ -71,6 +78,10 @@ export const getStaticProps: GetStaticProps = async () => {
     "profileImage": profileImage.asset->url
   }`);
 
+  const about = await sanityClient.fetch(`*[_type == 'about'] {
+    name, about
+  }`);
+
   return {
     props: {
       president: president[0],
@@ -78,6 +89,7 @@ export const getStaticProps: GetStaticProps = async () => {
       officeBearers,
       coreMembers,
       teachers,
+      about: about[1],
     },
   };
 };

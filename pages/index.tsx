@@ -1,14 +1,24 @@
 import { Events, Hero, Techelons } from "../containers";
+import { Event } from "../containers/Events/types";
 import sanityClient from "../sanityClient";
 import { GetStaticProps } from "next";
-import { Props } from "../containers/Events/types";
 import withLayout from "../HOC/withLayout";
 
-const Home = ({ events }: Props) => {
+interface About {
+  name: string;
+  about: Record<any, any>;
+}
+
+export interface Props {
+  about: About;
+  events: Event[];
+}
+
+const Home = ({ about, events }: Props) => {
   return (
     <>
       <Hero />
-      <Techelons />
+      <Techelons about={about} />
       <Events events={events} />
     </>
   );
@@ -26,9 +36,15 @@ export const getStaticProps: GetStaticProps = async () => {
     registrationLink
   }`);
 
+  const about =
+    await sanityClient.fetch(`* [_type == "about" && name == "Techelons"] {
+    name, about
+    }`);
+
   return {
     props: {
       events,
+      about: about[0],
     },
   };
 };

@@ -22,8 +22,8 @@ const Teachers = ({ teachers }: Props) => {
                     />
                   )}
                 />
+                <h2>{teacher.name}</h2>
               </div>
-              <h2>{teacher.name}</h2>
             </div>
           ))}
         </div>
