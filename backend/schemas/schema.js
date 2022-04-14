@@ -11,6 +11,7 @@ import officeBearer from "./officeBearer";
 import coreMember from "./coreMember";
 import teacher from "./teacher";
 import event from "./event";
+import about from "./about";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -26,6 +27,7 @@ export default createSchema({
     coreMember,
     officeBearer,
     teacher,
-    event
+    event,
+    about,
   ]),
 });
