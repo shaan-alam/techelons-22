@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <ParallaxProvider>
-        <NextNProgress color="#F5095F" />
+        <NextNProgress color="#ff5101" />
         <Component {...pageProps} />
       </ParallaxProvider>
     </>
