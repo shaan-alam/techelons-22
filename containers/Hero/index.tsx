@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "../../components";
-import { motion } from "framer-motion";
 import heroStyles from "./Hero.module.scss";
-import { container } from "./constants";
 import { v4 } from "uuid";
 import { Link } from "react-scroll";
 import { Parallax } from "react-scroll-parallax";
@@ -47,11 +45,10 @@ const Hero = () => {
         </div>
       )}
       <section id="home" className={heroStyles.home}>
-        <div className="bg_stars"></div>
         <main className={heroStyles.container}>
           <Parallax speed={-14} scale={[0.4, 1, "easeIn"]}>
             <div className={heroStyles.bg_image}>
-              <img src="./images/mars.png" alt="" />
+              <img src="./images/mars.webp" alt="Mars" />
             </div>
           </Parallax>
           <div className={heroStyles.hero}>

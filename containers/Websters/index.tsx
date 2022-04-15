@@ -23,7 +23,7 @@ const About = ({ about }: Props) => {
       <h1>About Us</h1>
       <div className={aboutStyles.about_websters}>
         <div className={aboutStyles.websters}>
-          <img src="./images/websters_logo.png" alt="Websters" />
+          <img src="./images/websters_logo.webp" alt="Websters" />
         </div>
         <div className={aboutStyles.intro_text}>
           <BlockContent
