@@ -1,18 +1,12 @@
 const withImages = require("next-images");
-const compose = require('next-compose-plugins')
-
-/** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-// };
-
-const withImagesConfig = withImages();
+const compose = require("next-compose-plugins");
 
 module.exports = compose([
-  [withImages, withImagesConfig],
+  [withImages()],
   {
+    reactStrictMode: true,
     env: {
-      GOOGLE_ANALYTICS_ID: 'G-HBNES2GKM6'
-    }
-  }
-])
+      GOOGLE_ANALYTICS_ID: "G-HBNES2GKM6",
+    },
+  },
+]);
