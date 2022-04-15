@@ -24,6 +24,11 @@
     h6 {
       @apply text-white;
     }
+
+    h1 {
+      @apply text-xl font-bold my-4;
+    }
+
     p {
       @apply my-4 text-white font-work leading-7;
     }
