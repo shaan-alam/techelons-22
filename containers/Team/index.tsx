@@ -7,9 +7,7 @@ const Team = ({
 }: Props) => {
   return (
     <section className={teamStyles.meet_team}>
-      <h1 className={teamStyles.heading}>
-        Meet Our Team <span role="emoji">💖</span>
-      </h1>
+      <h1 className={teamStyles.heading}>Council Members</h1>
       <div className={teamStyles.president}>
         <ProfileCard
           name={president.name}

@@ -23,7 +23,7 @@ const Hero = () => {
       .then((res) => res.json())
       .then((res) => {
         setQuote(res);
-        setLoading(false);
+        // setLoading(false);
       });
   }, []);
 
@@ -31,11 +31,19 @@ const Hero = () => {
     <>
       {loading && (
         <div className={heroStyles.loading}>
-          <img
-            src="./images/techelons_loading.svg"
-            alt="Techelons"
-            className="h-20 w-20"
-          />
+          <svg
+            width="50"
+            height="50"
+            viewBox="0 0 226 175"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M75.1349 72.7741V74.7741H77.1349H98.3464V166.377L3.46373 2H222.056L126.923 166.812V74.7741H148.135H150.135V72.7741V47.5089V45.5089H148.135H77.1349H75.1349V47.5089V72.7741Z"
+              stroke="#333"
+              strokeWidth="8"
+            />
+          </svg>
         </div>
       )}
       <section id="home" className={heroStyles.home}>
