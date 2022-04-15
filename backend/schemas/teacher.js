@@ -9,9 +9,9 @@ export default {
       type: "string",
     },
     {
-      name: "message",
-      title: "Message",
-      type: "text",
+      name: "designation",
+      title: "Designation",
+      type: "string",
     },
     {
       name: "profileImage",

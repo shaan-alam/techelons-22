@@ -1,6 +1,6 @@
 import teacherStyles from "./Teachers.module.scss";
-import LazyImage from "react-lazy-blur-image";
 import { Props } from "./types";
+import { ProfileCard } from "../../components";
 
 const Teachers = ({ teachers }: Props) => {
   return (
@@ -11,18 +11,11 @@ const Teachers = ({ teachers }: Props) => {
           {teachers.map((teacher) => (
             <div className={teacherStyles.teacher} key={teacher.name}>
               <div className={teacherStyles.teacher_pic}>
-                <LazyImage
-                  placeholder={teacher.profileImage}
-                  uri={teacher.profileImage}
-                  render={(src, style) => (
-                    <img
-                      src={src}
-                      style={style}
-                      className={teacherStyles.img}
-                    />
-                  )}
+                <ProfileCard
+                  name={teacher.name}
+                  designation={teacher.designation}
+                  imageURL={teacher.profileImage}
                 />
-                <h2>{teacher.name}</h2>
               </div>
             </div>
           ))}

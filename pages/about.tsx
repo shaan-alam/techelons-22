@@ -34,7 +34,6 @@ const AboutUs = ({
   about,
   volunteers,
 }: Props) => {
-  console.log(teachers);
   return (
     <>
       <About about={about} />
@@ -90,7 +89,8 @@ export const getStaticProps: GetStaticProps = async () => {
     await sanityClient.fetch(`*[_type == 'teacher'] | order(order asc) {
     name,
     message,
-    "profileImage": profileImage.asset->url
+    "profileImage": profileImage.asset->url,
+    designation
   }`);
 
   const about = await sanityClient.fetch(`*[_type == 'about'] {
