@@ -11,6 +11,7 @@
     "@sanity/client": "^3.3.0",
     "framer-motion": "^6.2.8",
     "next": "12.1.0",
+    "next-compose": "^0.0.2",
     "next-images": "^1.8.4",
     "nextjs-progressbar": "^0.0.14",
     "nprogress": "^0.2.0",

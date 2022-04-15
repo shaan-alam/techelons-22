@@ -1739,6 +1739,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
+next-compose@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/next-compose/-/next-compose-0.0.2.tgz#fa26aa6430bc4e34d72fe9e5bca780aef53cf191"
+  integrity sha1-+iaqZDC8TjTXL+nlvKeArvU88ZE=
+
 next-images@^1.8.4:
   version "1.8.4"
   resolved "https://registry.yarnpkg.com/next-images/-/next-images-1.8.4.tgz#3b3d4840dae50893fc2a15906266532ec5fa58f0"
