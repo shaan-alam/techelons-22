@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps = async () => {
       officeBearers,
       coreMembers,
       teachers,
-      about: about[1],
+      about: about[0],
     },
   };
 };
