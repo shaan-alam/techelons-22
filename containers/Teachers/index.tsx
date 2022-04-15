@@ -6,9 +6,9 @@ const Teachers = ({ teachers }: Props) => {
   return (
     <>
       <div className={teacherStyles.container}>
-        <h1>Teachers In Charge</h1>
+        <h1>Computer Science Dept. Professors</h1>
         <div className={teacherStyles.teachers}>
-          {teachers.map((teacher, index) => (
+          {teachers.map((teacher) => (
             <div className={teacherStyles.teacher} key={teacher.name}>
               <div className={teacherStyles.teacher_pic}>
                 <LazyImage

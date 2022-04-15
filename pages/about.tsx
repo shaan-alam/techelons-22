@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import sanityClient from "../sanityClient";
-import { Message, About, Team } from "../containers";
+import { Teachers, About, Team } from "../containers";
 import { Teacher } from "../containers/Teachers/types";
 import withLayout from "../HOC/withLayout";
 
@@ -34,10 +34,11 @@ const AboutUs = ({
   about,
   volunteers,
 }: Props) => {
+  console.log(teachers);
   return (
     <>
       <About about={about} />
-      <Message teachers={teachers} />
+      <Teachers teachers={teachers} />
       <Team
         team={{
           president,
@@ -72,7 +73,8 @@ export const getStaticProps: GetStaticProps = async () => {
     "profileImage": profileImage.asset->url
   }`);
 
-  const coreMembers = await sanityClient.fetch(`*[_type == 'coreMember'] {
+  const coreMembers =
+    await sanityClient.fetch(`*[_type == 'coreMember'] | order(order asc) {
     name,
     designation,
     "profileImage": profileImage.asset->url
@@ -84,7 +86,8 @@ export const getStaticProps: GetStaticProps = async () => {
     "profileImage": profileImage.asset->url
   }`);
 
-  const teachers = await sanityClient.fetch(`*[_type == 'teacher'] {
+  const teachers =
+    await sanityClient.fetch(`*[_type == 'teacher'] | order(order asc) {
     name,
     message,
     "profileImage": profileImage.asset->url
