@@ -34,6 +34,10 @@ const Event = ({ event }: Props) => {
           projectId="axxb6ocs"
           dataset="production"
         />
+        {event?.qr_code && <div className={eventStyles.qr_code}>
+          <h1>Scan for Registration</h1>
+          <img src={event.qr_code} alt="QR Code" />
+        </div>}
       </div>
     </div>
   );
@@ -47,7 +51,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     name,
     caption,
     "poster": poster.asset->url,
-    registrationLink
+    registrationLink,
+    "qr_code": qr_code.asset->url,
+    slug
   }`);
 
   return {
@@ -59,9 +65,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export const getStaticPaths = async () => {
   const events = (await sanityClient.fetch(`*[_type == "event"] {
-    name,
-    caption,
-    "poster": poster.asset->url,
     "slug": slug.current
   }`)) as Array<Event>;
 

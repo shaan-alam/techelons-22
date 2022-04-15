@@ -37,6 +37,14 @@ export default {
         hotspot: true,
       },
     },
+    {
+      name: "qr_code",
+      title: "QR Code",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+    },
   ],
 
   preview: {

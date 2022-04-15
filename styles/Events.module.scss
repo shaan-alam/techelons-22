@@ -8,6 +8,10 @@
   }
 
   .event_caption {
+    .qr_code {
+      @apply my-8;
+    }
+    
     .header {
       @apply flex w-full justify-between items-center pb-4 border-b my-8;
 

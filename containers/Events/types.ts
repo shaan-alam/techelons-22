@@ -23,6 +23,9 @@ export interface Event {
 
   /** Tag Line which is to be displayed on the event card */
   tagLine: string;
+  
+  /** QR code for the registration of the event */
+  qr_code?: string
 }
 
 export interface Props {
