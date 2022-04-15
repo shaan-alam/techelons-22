@@ -23,7 +23,7 @@ const Hero = () => {
       .then((res) => res.json())
       .then((res) => {
         setQuote(res);
-        // setLoading(false);
+        setLoading(false);
       });
   }, []);
 
