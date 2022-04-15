@@ -20,6 +20,7 @@ interface Props {
   vicePresidents: Member[];
   officeBearers: Member[];
   coreMembers: Member[];
+  volunteers: Member[];
   teachers: Teacher[];
   about: AboutWebster;
 }
@@ -31,16 +32,21 @@ const AboutUs = ({
   coreMembers,
   teachers,
   about,
+  volunteers,
 }: Props) => {
-  let temp = coreMembers[0];
-  coreMembers[0] = coreMembers[5];
-  coreMembers[5] = temp;
-
   return (
     <>
       <About about={about} />
       <Message teachers={teachers} />
-      <Team team={{ president, vicePresidents, officeBearers, coreMembers }} />
+      <Team
+        team={{
+          president,
+          vicePresidents,
+          officeBearers,
+          coreMembers,
+          volunteers,
+        }}
+      />
     </>
   );
 };
@@ -72,6 +78,12 @@ export const getStaticProps: GetStaticProps = async () => {
     "profileImage": profileImage.asset->url
   }`);
 
+  const volunteers = await sanityClient.fetch(`*[_type == 'volunteer'] {
+    name,
+    designation,
+    "profileImage": profileImage.asset->url
+  }`);
+
   const teachers = await sanityClient.fetch(`*[_type == 'teacher'] {
     name,
     message,
@@ -90,6 +102,7 @@ export const getStaticProps: GetStaticProps = async () => {
       coreMembers,
       teachers,
       about: about[0],
+      volunteers,
     },
   };
 };

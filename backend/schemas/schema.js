@@ -12,6 +12,7 @@ import coreMember from "./coreMember";
 import teacher from "./teacher";
 import event from "./event";
 import about from "./about";
+import volunteer from "./volunteer";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,5 +30,6 @@ export default createSchema({
     teacher,
     event,
     about,
+    volunteer,
   ]),
 });

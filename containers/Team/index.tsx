@@ -3,7 +3,7 @@ import { Props } from "./types";
 import teamStyles from "./Team.module.scss";
 
 const Team = ({
-  team: { president, vicePresidents, officeBearers, coreMembers },
+  team: { president, vicePresidents, officeBearers, coreMembers, volunteers },
 }: Props) => {
   return (
     <section className={teamStyles.meet_team}>
@@ -44,6 +44,14 @@ const Team = ({
             name={coreMember.name}
             designation={coreMember.designation}
             imageURL={coreMember.profileImage}
+          />
+        ))}
+        {volunteers.map((volunteer) => (
+          <ProfileCard
+            key={volunteer.name}
+            name={volunteer.name}
+            designation={volunteer.designation}
+            imageURL={volunteer.profileImage}
           />
         ))}
       </div>

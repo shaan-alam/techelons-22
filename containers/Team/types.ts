@@ -9,6 +9,7 @@ export interface Team {
   vicePresidents: Array<Member>;
   officeBearers: Array<Member>;
   coreMembers: Array<Member>;
+  volunteers: Array<Member>;
 }
 
 export interface Props {
