@@ -6,9 +6,7 @@ import sanityClient from "../../sanityClient";
 import { Event } from "../../containers/Events/types";
 import BlockContent from "@sanity/block-content-to-react";
 import withLayout from "../../HOC/withLayout";
-import Moment from "react-moment";
 import { PersonPlusFill } from "react-bootstrap-icons";
-import ReactMomentCountDown from "react-moment-countdown";
 
 interface Props {
   event: Event;
