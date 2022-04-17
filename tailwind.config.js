@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         epilogue: ["Epilogue", "sans-serif"],
         work: ["Work Sans", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
