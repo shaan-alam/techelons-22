@@ -7,11 +7,13 @@ import { Event } from "../../containers/Events/types";
 import BlockContent from "@sanity/block-content-to-react";
 import withLayout from "../../HOC/withLayout";
 import Moment from "react-moment";
-import { EyeFill } from "react-bootstrap-icons";
+import { PersonPlusFill } from "react-bootstrap-icons";
 
 interface Props {
   event: Event;
 }
+
+const SSR = typeof window === undefined;
 
 const Event = ({ event }: Props) => {
   return (
@@ -28,12 +30,10 @@ const Event = ({ event }: Props) => {
         <div className={eventStyles.header}>
           <div className="flex flex-col w-full">
             <h1>{event.name}</h1>
-            {new Date() < new Date(event.deadline) ? (
+            {new Date() < new Date(event.deadline) && !SSR ? (
               <p>
-                Deadline&nbsp;
-                <Moment from={new Date().toISOString()}>
-                  {event.deadline}
-                </Moment>
+                Deadline in&nbsp;
+                <Moment duration={new Date()} date={event.deadline} />
               </p>
             ) : (
               <p>Registrations Closed! 😢</p>
@@ -41,7 +41,10 @@ const Event = ({ event }: Props) => {
           </div>
           {new Date() < new Date(event.deadline) && (
             <a href={event.registrationLink} target="_blank" rel="noreferrer">
-              <Button>Register</Button>
+              <Button className="flex items-center justify-between">
+                <PersonPlusFill className="mr-1 h-4 w-4" />
+                &nbsp;Register
+              </Button>
             </a>
           )}
         </div>
