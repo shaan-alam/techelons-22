@@ -11,12 +11,18 @@
     .qr_code {
       @apply my-8;
     }
-    
-    .header {
-      @apply flex w-full justify-between items-center pb-4 border-b my-8;
 
-      h1 {
-        @apply font-epilogue text-white text-xl font-bold;
+    .header {
+      @apply flex w-full justify-between items-center pb-2 border-b my-8;
+
+      div {
+        h1 {
+          @apply font-epilogue text-white text-xl font-bold -mb-4 uppercase;
+        }
+
+        p {
+          @apply text-sm text-red-500;
+        }
       }
     }
 

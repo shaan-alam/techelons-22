@@ -14,6 +14,11 @@ export default {
       type: "slug",
     },
     {
+      name: "deadline",
+      title: "Deadline",
+      type: "datetime",
+    },
+    {
       name: "tagLine",
       title: "Tag Line",
       type: "string",

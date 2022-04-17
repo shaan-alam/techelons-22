@@ -6,6 +6,8 @@ import sanityClient from "../../sanityClient";
 import { Event } from "../../containers/Events/types";
 import BlockContent from "@sanity/block-content-to-react";
 import withLayout from "../../HOC/withLayout";
+import Moment from "react-moment";
+import { EyeFill } from "react-bootstrap-icons";
 
 interface Props {
   event: Event;
@@ -24,20 +26,37 @@ const Event = ({ event }: Props) => {
 
       <div className={eventStyles.event_caption}>
         <div className={eventStyles.header}>
-          <h1>{event.name}</h1>
-          <a href={event.registrationLink} target="_blank" rel="noreferrer">
-            <Button>Register</Button>
-          </a>
+          <div className="flex flex-col w-full">
+            <h1>{event.name}</h1>
+            {new Date() < new Date(event.deadline) ? (
+              <p>
+                Deadline&nbsp;
+                <Moment from={new Date().toISOString()}>
+                  {event.deadline}
+                </Moment>
+              </p>
+            ) : (
+              <p>Registrations Closed! 😢</p>
+            )}
+          </div>
+          {new Date() < new Date(event.deadline) && (
+            <a href={event.registrationLink} target="_blank" rel="noreferrer">
+              <Button>Register</Button>
+            </a>
+          )}
         </div>
+
         <BlockContent
           blocks={event.caption}
           projectId="axxb6ocs"
           dataset="production"
         />
-        {event?.qr_code && <div className={eventStyles.qr_code}>
-          <h1>Scan for Registration</h1>
-          <img src={event.qr_code} alt="QR Code" />
-        </div>}
+        {event?.qr_code && new Date() < new Date(event.deadline) && (
+          <div className={eventStyles.qr_code}>
+            <h1>Scan for Registration</h1>
+            <img src={event.qr_code} alt="QR Code" />
+          </div>
+        )}
       </div>
     </div>
   );
@@ -53,7 +72,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     "poster": poster.asset->url,
     registrationLink,
     "qr_code": qr_code.asset->url,
-    slug
+    slug,
+    deadline
   }`);
 
   return {
