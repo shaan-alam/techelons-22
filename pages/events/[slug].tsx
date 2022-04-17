@@ -8,6 +8,7 @@ import BlockContent from "@sanity/block-content-to-react";
 import withLayout from "../../HOC/withLayout";
 import Moment from "react-moment";
 import { PersonPlusFill } from "react-bootstrap-icons";
+import ReactMomentCountDown from "react-moment-countdown";
 
 interface Props {
   event: Event;
@@ -30,12 +31,7 @@ const Event = ({ event }: Props) => {
         <div className={eventStyles.header}>
           <div className="flex flex-col w-full">
             <h1>{event.name}</h1>
-            {new Date() < new Date(event.deadline) && !SSR ? (
-              <p>
-                Deadline in&nbsp;
-                <Moment duration={new Date()} date={event.deadline} />
-              </p>
-            ) : (
+            {new Date() > new Date(event.deadline) && (
               <p>Registrations Closed! 😢</p>
             )}
           </div>

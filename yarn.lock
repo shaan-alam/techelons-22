@@ -2470,11 +2470,6 @@ react-lazy-blur-image@^0.1.2:
   dependencies:
     react-visibility-sensor "^5.1.1"
 
-react-moment@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/react-moment/-/react-moment-1.1.2.tgz#a9b157c58ddd226a2f746e5ca43415b24a17b6af"
-  integrity sha512-lfb+shYXI2tXlQrNUpNr05/1D/kzFj8Isbfp89DQrpZk0fs2JIAnLHWETR0hQS9zvtzwLWlVv0wKLffbue5HoA==
-
 react-parallax-tilt@^1.6.7:
   version "1.6.7"
   resolved "https://registry.yarnpkg.com/react-parallax-tilt/-/react-parallax-tilt-1.6.7.tgz#498cfe3c452c6c8b1fba3a3a6bf04a4a79360e03"
